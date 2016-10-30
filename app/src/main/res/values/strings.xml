@@ -5,4 +5,8 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+    <string name="inventario">Inventario</string>
+    <string name="registro_reproductivo">Registro Reproductivo</string>
+    <string name="control_de_peso">Control de Peso</string>
+    <string name="reidentificaci_n_y_bajas">Reidentificación y Bajas</string>
 </resources>

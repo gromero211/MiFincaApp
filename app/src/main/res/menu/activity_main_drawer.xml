@@ -3,38 +3,19 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/Inventario"
-            android:title="Inventario" />
+            android:id="@+id/inventario"
+            android:title="@string/inventario" />
         <item
-            android:id="@+id/Reproduccion"
-            android:title="Registro Reproductivo" >
-            <menu >
-                <item android:title="Registrar en Inventario"
-                    android:id="@+id/inventario_registrar" />
-                <item android:title="Buscar Registro"
-                    android:id="@+id/inventario_buscar" />
-                <item android:title="Eliminar en Registro"
-                    android:id="@+id/inventario_eliminar" />
-            </menu>
-        </item>
+            android:id="@+id/reproduccion"
+            android:title="@string/registro_reproductivo" ></item>
         <item
-            android:id="@+id/Medicamentos"
+            android:id="@+id/medicamentos"
             android:title="Control de Medicamentos" />
         <item
             android:id="@+id/Peso"
-            android:title="Control de Peso" />
-        <item android:title="Reidentificación y Bajas"
-            android:id="@+id/Reidentificacion">
-            <menu>
-                <item
-                    android:id="@+id/nav_share"
-                    android:icon="@drawable/ic_menu_share" />
-                <item
-                    android:id="@+id/nav_send"
-                    android:icon="@drawable/ic_menu_send"
-                    android:title="Send" />
-            </menu>
-        </item>
+            android:title="@string/control_de_peso" />
+        <item android:title="@string/reidentificaci_n_y_bajas"
+            android:id="@+id/Reidentificacion"></item>
     </group>
 
 </menu>
