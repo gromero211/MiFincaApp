@@ -82,6 +82,7 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.inventario) {
             // Handle the camera action
+
         } else if (id == R.id.reproduccion) {
 
         } else if (id == R.id.medicamentos) {

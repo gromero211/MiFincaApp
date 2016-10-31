@@ -9,4 +9,5 @@
     <string name="registro_reproductivo">Registro Reproductivo</string>
     <string name="control_de_peso">Control de Peso</string>
     <string name="reidentificaci_n_y_bajas">Reidentificación y Bajas</string>
+    <string name="title_activity_inventario__registrar">inventario_Registrar</string>
 </resources>
