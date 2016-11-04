@@ -11,4 +11,5 @@
     <string name="reidentificaci_n_y_bajas">Reidentificación y Bajas</string>
     <string name="title_activity_inventario__registrar">inventario_Registrar</string>
     <string name="title_activity_inventario">Inventario</string>
+    <string name="title_activity_control_peso">controlPeso</string>
 </resources>
