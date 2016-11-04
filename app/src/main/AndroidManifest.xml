@@ -21,6 +21,10 @@
         <activity
             android:name=".inventario_Registrar"
             android:label="@string/title_activity_inventario__registrar"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Inventario"
+            android:label="@string/title_activity_inventario"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
