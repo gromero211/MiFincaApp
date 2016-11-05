@@ -36,7 +36,9 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".control_peso_buscar" />
         <activity android:name=".control_peso_editar" />
-        <activity android:name=".control_peso_eliminar"></activity>
+        <activity android:name=".control_peso_eliminar" />
+        <activity android:name=".ganadoCambios" />
+        <activity android:name=".cambios_reidentificacion"></activity>
     </application>
 
 </manifest>
