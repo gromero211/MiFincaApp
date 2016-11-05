@@ -33,7 +33,10 @@
         <activity
             android:name=".controlPeso_registrar"
             android:label="@string/title_activity_control_peso_registrar"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".control_peso_buscar" />
+        <activity android:name=".control_peso_editar" />
+        <activity android:name=".control_peso_eliminar"></activity>
     </application>
 
 </manifest>
