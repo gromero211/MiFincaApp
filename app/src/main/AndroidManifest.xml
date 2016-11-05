@@ -38,7 +38,8 @@
         <activity android:name=".control_peso_editar" />
         <activity android:name=".control_peso_eliminar" />
         <activity android:name=".ganadoCambios" />
-        <activity android:name=".cambios_reidentificacion"></activity>
+        <activity android:name=".cambios_reidentificacion" />
+        <activity android:name=".cambiosBajas"></activity>
     </application>
 
 </manifest>
