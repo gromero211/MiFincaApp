@@ -13,14 +13,4 @@
     tools:context="com.mifincaapp.mifincaapp.Inventario"
     tools:showIn="@layout/activity_inventario">
 
-    <android.support.v7.widget.Toolbar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:theme="?attr/actionBarTheme"
-        android:minHeight="?attr/actionBarSize"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="12dp"
-        android:id="@+id/toolbar2" />
 </RelativeLayout>

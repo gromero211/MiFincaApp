@@ -13,4 +13,5 @@
     <string name="title_activity_inventario">Inventario</string>
     <string name="title_activity_control_peso">controlPeso</string>
     <string name="title_activity_control_peso_registrar">controlPeso_registrar</string>
+    <string name="title_activity_inventario_registrar">Inventario_registrar</string>
 </resources>

@@ -11,21 +11,7 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".inventario_Registrar"
-            android:label="@string/title_activity_inventario__registrar"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Inventario"
-            android:label="@string/title_activity_inventario"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".controlPeso"
             android:label="@string/title_activity_control_peso"
@@ -39,7 +25,21 @@
         <activity android:name=".control_peso_eliminar" />
         <activity android:name=".ganadoCambios" />
         <activity android:name=".cambios_reidentificacion" />
-        <activity android:name=".cambiosBajas"></activity>
+        <activity android:name=".cambiosBajas" />
+        <activity
+            android:name=".Inventario"
+            android:label="@string/title_activity_inventario"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Inventario_registrar"
+            android:label="Registrar Inventario"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
