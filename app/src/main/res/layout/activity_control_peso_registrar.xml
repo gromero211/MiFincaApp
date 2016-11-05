@@ -47,7 +47,7 @@
 
             <TextView
                 android:textSize="20dp"
-                android:text="Editar"
+                android:text="Registrar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView2"
@@ -202,16 +202,16 @@
         android:text="Guardar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button2"
-        android:layout_marginTop="250dp"
+        android:id="@+id/button4"
+        android:layout_marginTop="400dp"
         android:layout_marginLeft="70dp"/>
 
     <Button
         android:text="Cancelar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button3"
-        android:layout_marginTop="250dp"
+        android:id="@+id/button5"
+        android:layout_marginTop="400dp"
         android:layout_marginLeft="210dp"/>
 
 </android.support.design.widget.CoordinatorLayout>
