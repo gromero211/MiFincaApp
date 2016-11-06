@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_control_reproductivo_registrar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.mifincaapp.mifincaapp.Control_reproductivo_registrar"
+    tools:showIn="@layout/activity_control_reproductivo_registrar">
+    <TextView
+        android:text="Fecha de Diagnóstico:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText12"
+        android:layout_alignLeft="@+id/textView40"
+        android:layout_alignStart="@+id/textView40"
+        android:layout_marginTop="23dp"
+        android:id="@+id/textView42"
+        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editText12"
+        android:text="####"
+        android:fontFamily="sans-serif"
+        android:textSize="14sp"
+        android:textAlignment="center"
+        android:layout_alignBottom="@+id/textView40"
+        android:layout_alignLeft="@+id/editText13"
+        android:layout_alignStart="@+id/editText13"
+        android:layout_alignRight="@+id/editText13"
+        android:layout_alignEnd="@+id/editText13" />
+
+    <TextView
+        android:text="Mét. Detección:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:id="@+id/textView44"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:layout_below="@+id/textView42"
+        android:layout_alignLeft="@+id/textView42"
+        android:layout_alignStart="@+id/textView42" />
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/editText13"
+        android:textAlignment="center"
+        android:text="dd/mm/aaaa"
+        android:textSize="14sp"
+        android:layout_alignBaseline="@+id/textView42"
+        android:layout_alignBottom="@+id/textView42"
+        android:layout_toRightOf="@+id/textView42"
+        android:layout_toEndOf="@+id/textView42" />
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="método"
+        android:ems="10"
+        android:layout_below="@+id/editText13"
+        android:layout_alignLeft="@+id/editText13"
+        android:layout_alignStart="@+id/editText13"
+        android:id="@+id/editText15"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textAlignment="center" />
+
+    <TextView
+        android:text="Fecha de parto:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:id="@+id/textView46"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:layout_below="@+id/textView41"
+        android:layout_alignLeft="@+id/textView41"
+        android:layout_alignStart="@+id/textView41" />
+
+    <TextView
+        android:text="Desarrollo de parto:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:id="@+id/textView47"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:layout_below="@+id/textView46"
+        android:layout_alignLeft="@+id/textView46"
+        android:layout_alignStart="@+id/textView46" />
+
+    <TextView
+        android:text="N° de crías:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:id="@+id/textView48"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:layout_below="@+id/textView47"
+        android:layout_alignLeft="@+id/textView47"
+        android:layout_alignStart="@+id/textView47" />
+
+    <TextView
+        android:text="Comentarios:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:id="@+id/textView45"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:layout_below="@+id/textView48"
+        android:layout_alignLeft="@+id/textView48"
+        android:layout_alignStart="@+id/textView48" />
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="nombre"
+        android:ems="10"
+        android:id="@+id/editText14"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textAlignment="center"
+        android:layout_below="@+id/editText15"
+        android:layout_alignLeft="@+id/editText15"
+        android:layout_alignStart="@+id/editText15"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:text="Semental:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView41"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:layout_alignBaseline="@+id/editText14"
+        android:layout_alignBottom="@+id/editText14"
+        android:layout_alignLeft="@+id/textView44"
+        android:layout_alignStart="@+id/textView44" />
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/editText16"
+        android:textAlignment="center"
+        android:text="dd/mm/aaaa"
+        android:textSize="14sp"
+        android:layout_alignBaseline="@+id/textView46"
+        android:layout_alignBottom="@+id/textView46"
+        android:layout_alignLeft="@+id/editText14"
+        android:layout_alignStart="@+id/editText14" />
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="nombre"
+        android:ems="10"
+        android:id="@+id/editText17"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textAlignment="center"
+        android:layout_alignBaseline="@+id/textView47"
+        android:layout_alignBottom="@+id/textView47"
+        android:layout_alignLeft="@+id/editText16"
+        android:layout_alignStart="@+id/editText16" />
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editText18"
+        android:text="####"
+        android:fontFamily="sans-serif"
+        android:textSize="14sp"
+        android:textAlignment="center"
+        android:layout_alignBaseline="@+id/textView48"
+        android:layout_alignBottom="@+id/textView48"
+        android:layout_alignLeft="@+id/editText17"
+        android:layout_alignStart="@+id/editText17" />
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="comentarios"
+        android:ems="10"
+        android:id="@+id/editText19"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textAlignment="center"
+        android:layout_below="@+id/editText18"
+        android:layout_alignLeft="@+id/editText18"
+        android:layout_alignStart="@+id/editText18" />
+
+    <TextView
+        android:text="N° Arete:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="29dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="67dp"
+        android:id="@+id/textView40"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="14sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Nuevo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editText12"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView43"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="24sp"
+        android:textAlignment="center" />
+</RelativeLayout>

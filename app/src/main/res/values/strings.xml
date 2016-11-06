@@ -15,4 +15,9 @@
     <string name="title_activity_control_peso_registrar">controlPeso_registrar</string>
     <string name="title_activity_inventario_registrar">Inventario_registrar</string>
     <string name="title_activity_inventario_modificar">Inventario_modificar</string>
+    <string name="title_activity_control_reproductivo">Control_reproductivo</string>
+    <string name="title_activity_control_reproductivo_registrar">Control_reproductivo_registrar
+    </string>
+    <string name="title_activity_control_reproductivo_modificar">Control_reproductivo_modificar
+    </string>
 </resources>
