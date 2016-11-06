@@ -5,15 +5,7 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/inventario"
-            android:title="@string/inventario">
-            <menu >
-                <item android:title="Item" />
-                <item android:title="Registrar Ganado"
-                    android:enabled="false"
-                    android:checkable="false" />
-                <item android:title="Buscar Registro" />
-            </menu>
-        </item>
+            android:title="@string/inventario"></item>
         <item
             android:id="@+id/reproduccion"
             android:title="@string/registro_reproductivo" ></item>

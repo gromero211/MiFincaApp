@@ -13,4 +13,16 @@
     tools:context="com.mifincaapp.mifincaapp.Inventario"
     tools:showIn="@layout/activity_inventario">
 
+    <TextView
+        android:text="Inventario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="57dp"
+        android:id="@+id/textView39"
+        android:textAlignment="center"
+        android:typeface="normal"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="24sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

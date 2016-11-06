@@ -35,12 +35,14 @@
         <activity
             android:name=".Inventario"
             android:label="@string/title_activity_inventario"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".Inventario_registrar"
             android:label="Registrar Inventario"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".Inventario_modificar"
+            android:label="Modificar Inventario"
             android:theme="@style/AppTheme.NoActionBar">
 
         </activity>
