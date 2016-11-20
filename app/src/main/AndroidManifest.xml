@@ -37,33 +37,22 @@
             android:label="@string/title_activity_inventario"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Inventario_registrar"
-            android:label="Registrar Inventario"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".Inventario_modificar"
             android:label="Modificar Inventario"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Control_reproductivo"
-            android:label="Listado Reproductivo"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Control_reproductivo_registrar"
-            android:label="Control Reproductivo"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
-        <activity
-            android:name=".Control_reproductivo_modificar"
-            android:label="Control Reproductivo"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
-     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <activity android:name=".Inventario_nuevo" />
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".Control_reproductivo"
+            android:label="Control Reproductivo"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

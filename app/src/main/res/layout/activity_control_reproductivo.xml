@@ -6,6 +6,13 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context="com.mifincaapp.mifincaapp.Control_reproductivo">
+    <FrameLayout
+
+        android:layout_marginTop="75dp"
+        android:id="@+id/cReproductivo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <include layout="@layout/content_inventario" />
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -16,20 +23,20 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="@android:color/holo_green_dark"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_control_reproductivo" />
+    <include layout="@layout/content_control_reproductivo2" />
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
+        android:id="@+id/fabReproductivo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_menu_add"
+        app:srcCompat="@drawable/ic_action_name"
         app:backgroundTint="@android:color/holo_green_dark" />
 
 </android.support.design.widget.CoordinatorLayout>

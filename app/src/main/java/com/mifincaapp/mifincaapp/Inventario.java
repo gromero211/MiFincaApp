@@ -30,7 +30,12 @@ public class Inventario extends AppCompatActivity {
             }
         });
 
+
+
     }
+
+
+
 
     private void mostrarFragment(Fragment fragment) {
         FragmentManager fragmentManager= getSupportFragmentManager();
@@ -45,5 +50,7 @@ public class Inventario extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_inventario, menu);
         return true;
     }
+
+
 
 }

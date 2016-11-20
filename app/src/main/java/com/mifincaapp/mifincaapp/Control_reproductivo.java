@@ -2,14 +2,15 @@ package com.mifincaapp.mifincaapp;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.View;
 
 public class Control_reproductivo extends AppCompatActivity {
-
+    public static final int FORM_KEY=1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,20 +18,22 @@ public class Control_reproductivo extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fabReproductivo);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+              //  Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                //        .setAction("Action", null).show();
+                Fragment fragment=Control_reproductivo_nuevo.getInstance();
+                mostrarFragment(fragment);
             }
         });
     }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_inventario, menu);
-        return true;
+    private void mostrarFragment(Fragment fragment) {
+        FragmentManager fragmentManager= getSupportFragmentManager();
+        FragmentTransaction trasaccion=fragmentManager.beginTransaction();
+        trasaccion.replace(R.id.cReproductivo,fragment);
+        trasaccion.commit();
     }
 
 }

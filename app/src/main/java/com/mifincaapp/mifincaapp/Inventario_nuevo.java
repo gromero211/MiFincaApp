@@ -17,6 +17,13 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class Inventario_nuevo extends Fragment {
+    // TODO: Rename and change types of parameters
+    private static final String ARG_PARAM1 = "param1";
+    private static final String ARG_PARAM2 = "param2";
+
+
+    private String mParam1;
+    private String mParam2;
     public Inventario_nuevo() {
 
     }
@@ -27,12 +34,17 @@ public class Inventario_nuevo extends Fragment {
 
     }
 
+
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragment_inventario_nuevo,container,false);
+
         return view;
 
 
+
     }
+
 }

@@ -14,6 +14,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
@@ -105,7 +106,8 @@ public class MainActivity extends AppCompatActivity
             Intent intent=new Intent(MainActivity.this, Inventario.class);
             startActivityForResult(intent,Inventario.FORM_KEY);
         } else if (id == R.id.reproduccion) {
-
+            Intent intent=new Intent(MainActivity.this, Control_reproductivo.class);
+            startActivityForResult(intent,Control_reproductivo.FORM_KEY);
         } else if (id == R.id.medicamentos) {
 
         } else if (id == R.id.Peso) {
@@ -163,5 +165,14 @@ public class MainActivity extends AppCompatActivity
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         AppIndex.AppIndexApi.end(client, getIndexApiAction());
         client.disconnect();
+    }
+    //confirmacion guardar inventario
+    public void guardarInventario(View v)
+    {
+        android.app.FragmentManager fg= getFragmentManager();
+        DialogoGuardarInventario guardarInv=new DialogoGuardarInventario();
+        guardarInv.show(fg,"Alerta");
+
+
     }
 }
