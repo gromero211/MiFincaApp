@@ -6,12 +6,13 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.View;
 
 public class Inventario extends AppCompatActivity {
-
+    RecyclerView nlistcontainer;
     public static final int FORM_KEY=1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,9 +31,11 @@ public class Inventario extends AppCompatActivity {
             }
         });
 
+//spiner
 
 
     }
+
 
 
 
