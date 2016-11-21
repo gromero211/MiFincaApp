@@ -115,7 +115,8 @@ public class MainActivity extends AppCompatActivity
             startActivityForResult(intent, controlPeso.FORM_KEY);
         }
          else if (id == R.id.Cambios) {
-
+            Intent intent=new Intent(MainActivity.this, ganadoCambios.class);
+            startActivityForResult(intent, ganadoCambios.FORM_KEY);
         }
 
        /* } else if (id == R.id.nav_share) {
