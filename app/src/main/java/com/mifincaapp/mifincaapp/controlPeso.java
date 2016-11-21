@@ -2,7 +2,6 @@ package com.mifincaapp.mifincaapp;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -24,7 +23,7 @@ public class controlPeso extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Fragment fragment=controlPeso_registrar.getInstance();
+                Fragment fragment=Inventario_nuevo.getInstance();
                 mostrarFragment(fragment);
             }
         });
@@ -33,7 +32,7 @@ public class controlPeso extends AppCompatActivity {
     private void mostrarFragment(Fragment fragment) {
         FragmentManager fragmentManager= getSupportFragmentManager();
         FragmentTransaction trasaccion=fragmentManager.beginTransaction();
-        trasaccion.replace(R.id.content_controlpeso,fragment);
+        trasaccion.replace(R.id.content_control_peso,fragment);
         trasaccion.commit();
     }
 
