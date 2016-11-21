@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 
 public class Inventario extends AppCompatActivity {
@@ -28,6 +29,7 @@ public class Inventario extends AppCompatActivity {
             public void onClick(View view) {
                 Fragment fragment=Inventario_nuevo.getInstance();
                 mostrarFragment(fragment);
+
             }
         });
 
@@ -51,6 +53,29 @@ public class Inventario extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_inventario, menu);
+        MenuItem item = menu.findItem(R.id.btnEliminarInventario);
+        item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                Fragment fragment=Inventario_eliminar.getInstance();
+                mostrarFragment(fragment);
+
+                //Intent intent=new Intent(Inventario.this, Inventario.class);
+                //startActivityForResult(intent,Inventario.FORM_KEY);
+                return true;
+            }
+
+        });
+
+        MenuItem item2 = menu.findItem(R.id.btnBuscarInventario);
+        item2.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                Fragment fragment=Inventario_buscar.getInstance();
+                mostrarFragment(fragment);
+                return true;
+            }
+        });
         return true;
     }
 

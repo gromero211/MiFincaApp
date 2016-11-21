@@ -18,6 +18,10 @@ public class Inventario_eliminar extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_inventario_eliminar, container, false);
     }
+    public static Inventario_eliminar getInstance(){
+        Inventario_eliminar fragment=new Inventario_eliminar();
+        return fragment;
 
+    }
 
 }
