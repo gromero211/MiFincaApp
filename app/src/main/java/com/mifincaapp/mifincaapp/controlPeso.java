@@ -23,7 +23,7 @@ public class controlPeso extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Fragment fragment=Inventario_nuevo.getInstance();
+                Fragment fragment= controlPeso_registrar.getInstance();
                 mostrarFragment(fragment);
             }
         });
