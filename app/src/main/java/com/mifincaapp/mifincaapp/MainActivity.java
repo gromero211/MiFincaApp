@@ -111,7 +111,8 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.medicamentos) {
 
         } else if (id == R.id.Peso) {
-
+            Intent intent=new Intent(MainActivity.this, controlPeso.class);
+            startActivityForResult(intent,controlPeso.FORM_KEY);
         }
 
        /* } else if (id == R.id.nav_share) {
