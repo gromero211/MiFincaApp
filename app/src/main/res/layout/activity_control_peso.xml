@@ -21,8 +21,16 @@
 
     </android.support.design.widget.AppBarLayout>
 
+    <FrameLayout
+
+        android:layout_marginTop="75dp"
+        android:id="@+id/content_controlpeso"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <include layout="@layout/content_control_peso" />
+
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
+        android:id="@+id/fabControlPeso"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
@@ -42,14 +50,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button1"
-        android:layout_marginTop="170dp"
+        android:layout_marginTop="230dp"
         android:layout_marginLeft="150dp"/>
     <Button
         android:text="Eliminar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button4"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="310dp"
         android:layout_marginLeft="150dp"/>
 
     <Button
@@ -57,7 +65,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button5"
-        android:layout_marginTop="330dp"
+        android:layout_marginTop="390dp"
         android:layout_marginLeft="150dp"/>
 
 </android.support.design.widget.CoordinatorLayout>
