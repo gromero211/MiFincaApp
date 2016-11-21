@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.mifincaapp.mifincaapp.ControlPeso_registrar">
+    tools:context="com.mifincaapp.mifincaapp.controlPeso_registrar">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -30,20 +30,21 @@
         android:id="@+id/textView2"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="120dp"/>
-    <Button
-        android:text="Reidentificacion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button4"
-        android:layout_marginTop="250dp"
-        android:layout_marginLeft="110dp"/>
 
     <Button
         android:text="Bajas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button5"
+        android:id="@+id/buttonBajas"
         android:layout_marginTop="330dp"
         android:layout_marginLeft="140dp"/>
+
+    <Button
+        android:text="Reidentificacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonReidentificacion"
+        android:layout_marginTop="210dp"
+        android:layout_marginLeft="110dp"/>
 
 </android.support.design.widget.CoordinatorLayout>

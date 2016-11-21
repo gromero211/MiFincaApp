@@ -34,7 +34,7 @@
         app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior">
 
         <RelativeLayout
-            android:id="@+id/content_control_peso_registrar"
+            android:id="@+id/content_control_peso_editar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingBottom="@dimen/activity_vertical_margin"
@@ -43,7 +43,7 @@
             android:paddingTop="@dimen/activity_vertical_margin"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
             tools:context="com.mifincaapp.mifincaapp.ControlPeso_registrar"
-            tools:showIn="@layout/activity_control_peso_registrar">
+            tools:showIn="@layout/activity_control_peso_editar">
 
             <TextView
                 android:textSize="20dp"
@@ -82,7 +82,7 @@
                 android:layout_below="@+id/textView3"
                 android:layout_alignLeft="@+id/editText2"
                 android:layout_alignStart="@+id/editText2"
-                android:text="00/00/00"
+                android:text="17/10/16"
                 android:textAlignment="center"
                 android:id="@+id/editText"
                 android:layout_marginTop="10dp"/>
@@ -109,13 +109,13 @@
                 android:layout_alignLeft="@+id/editText"
                 android:layout_alignStart="@+id/editText"
                 android:id="@+id/editText3"
-                android:text="0" />
+                android:text="14" />
 
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="number"
-                android:text="0"
+                android:text="5"
                 android:textAlignment="center"
                 android:ems="8"
                 android:id="@+id/editText2"
@@ -139,7 +139,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="number"
-                android:text="0"
+                android:text="5"
                 android:textAlignment="center"
                 android:ems="10"
                 android:id="@+id/editText5"
@@ -162,7 +162,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
-                android:text="Ingrese la raza"
+                android:text="Pasiega"
                 android:textAlignment="center"
                 android:ems="10"
                 android:layout_below="@+id/textView12"
@@ -255,31 +255,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
                     <TextView
-                        android:text="Text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/textView30"
-                        android:layout_margin="5dp"
-                        android:textAlignment="center"/>
-
-                    <TextView
-                        android:text="Text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/textView29"
-                        android:layout_margin="5dp"
-                        android:textAlignment="center"/>
-
-                    <TextView
-                        android:text="Text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/textView28"
-                        android:layout_margin="5dp"
-                        android:textAlignment="center"/>
-
-                    <TextView
-                        android:text="Text"
+                        android:text="5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/textView24"
@@ -287,7 +263,7 @@
                         android:textAlignment="center"/>
 
                     <TextView
-                        android:text="Text"
+                        android:text="19/11/16"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/textView25"
@@ -295,62 +271,34 @@
                         android:textAlignment="center"/>
 
                     <TextView
-                        android:text="Text"
+                        android:text="14"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/textView26"
                         android:layout_margin="5dp"
                         android:textAlignment="center"/>
-                </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
                     <TextView
-                        android:text="Text"
+                        android:text="4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/textView6"
+                        android:id="@+id/textView27"
                         android:layout_margin="5dp"
                         android:textAlignment="center"/>
 
                     <TextView
-                        android:text="Text"
+                        android:text="Pasiega"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/textView9"
+                        android:id="@+id/textView28"
                         android:layout_margin="5dp"
                         android:textAlignment="center"/>
 
                     <TextView
-                        android:text="Text"
+                        android:text="668"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/textView20"
-                        android:layout_margin="5dp"
-                        android:textAlignment="center"/>
-
-                    <TextView
-                        android:text="Text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/textView21"
-                        android:layout_margin="5dp"
-                        android:textAlignment="center"/>
-
-                    <TextView
-                        android:text="Text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/textView22"
-                        android:layout_margin="5dp"
-                        android:textAlignment="center"/>
-
-                    <TextView
-                        android:text="Text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/textView19"
+                        android:id="@+id/textView29"
                         android:layout_margin="5dp"
                         android:textAlignment="center"/>
                 </TableRow>
