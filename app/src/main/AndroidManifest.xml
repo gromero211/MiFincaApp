@@ -29,7 +29,6 @@
         <activity android:name=".control_peso_buscar" />
         <activity android:name=".control_peso_editar" />
         <activity android:name=".control_peso_eliminar" />
-        <activity android:name=".ganadoCambios" />
         <activity android:name=".cambios_reidentificacion" />
         <activity android:name=".cambiosBajas" />
         <activity
@@ -52,6 +51,10 @@
         <activity
             android:name=".Control_reproductivo"
             android:label="Control Reproductivo"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Reidentificacion"
+            android:label="@string/title_activity_reidentificacion"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

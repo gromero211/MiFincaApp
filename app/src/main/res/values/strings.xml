@@ -29,4 +29,5 @@
         <item>Otros</item>
 
     </string-array>
+    <string name="title_activity_reidentificacion">Reidentificacion</string>
 </resources>

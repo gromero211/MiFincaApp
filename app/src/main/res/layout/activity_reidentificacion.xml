@@ -5,8 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.mifincaapp.mifincaapp.controlPeso_registrar">
+    tools:context="com.mifincaapp.mifincaapp.Reidentificacion">
+    <FrameLayout
 
+        android:layout_marginTop="75dp"
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <include layout="@layout/content_reidentificacion" />
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,35 +22,19 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="@android:color/holo_green_dark"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
-
 
     </android.support.design.widget.AppBarLayout>
 
-    <TextView
-        android:textSize="22dp"
-        android:text="Cambios"
+    <include layout="@layout/content_reidentificacion" />
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabReidentificacion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView2"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="120dp"/>
-
-    <Button
-        android:text="Bajas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/buttonBajas"
-        android:layout_marginTop="330dp"
-        android:layout_marginLeft="140dp"/>
-
-    <Button
-        android:text="Reidentificacion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/buttonReidentificacion"
-        android:layout_marginTop="210dp"
-        android:layout_marginLeft="110dp"/>
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@drawable/ic_action_name"
+        app:backgroundTint="@android:color/holo_green_dark" />
 
 </android.support.design.widget.CoordinatorLayout>
