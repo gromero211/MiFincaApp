@@ -15,8 +15,9 @@
         <item
             android:id="@+id/Peso"
             android:title="@string/control_de_peso" />
-        <item android:title="@string/reidentificaci_n_y_bajas"
-            android:id="@+id/Cambios"></item>
+        <item
+            android:id="@+id/Cambios"
+            android:title="@string/reidentificaci_n_y_bajas"></item>
     </group>
 
 </menu>
