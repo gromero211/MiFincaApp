@@ -25,9 +25,18 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string-array name="categoriasNuevoInventario">
+        <item>Seleccione</item>
         <item>Bovino</item>
         <item>Otros</item>
 
     </string-array>
+    <string-array name="raza">
+        <item>Seleccione</item>
+        <item>1</item>
+        <item>2</item>
+
+    </string-array>
     <string name="title_activity_reidentificacion">Reidentificacion</string>
+    <string name="require_fields">El nombre y la edad son obligatorios</string>
+    <string name="error_on_save">Ocurrió un error al guardar el registro</string>
 </resources>

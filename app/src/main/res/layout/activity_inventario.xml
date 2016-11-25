@@ -35,4 +35,9 @@
         app:srcCompat="@drawable/ic_action_name"
         app:backgroundTint="@android:color/holo_green_dark" />
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></LinearLayout>
+
 </android.support.design.widget.CoordinatorLayout>
