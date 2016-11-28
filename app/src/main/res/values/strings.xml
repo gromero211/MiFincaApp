@@ -37,6 +37,6 @@
 
     </string-array>
     <string name="title_activity_reidentificacion">Reidentificacion</string>
-    <string name="require_fields">El nombre y la edad son obligatorios</string>
+    <string name="require_fields">El nombre y el arete anterior son obligatorios</string>
     <string name="error_on_save">Ocurrió un error al guardar el registro</string>
 </resources>

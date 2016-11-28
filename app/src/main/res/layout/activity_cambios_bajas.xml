@@ -116,7 +116,7 @@
                 android:layout_alignStart="@+id/editText2"
                 android:text="02/06/12"
                 android:textAlignment="center"
-                android:id="@+id/editText"
+                android:id="@+id/txtFecha"
                 android:layout_marginTop="10dp"/>
 
             <TextView
@@ -138,9 +138,9 @@
                 android:layout_marginTop="10dp"
                 android:ems="10"
                 android:layout_below="@+id/textView5"
-                android:layout_alignLeft="@+id/editText"
-                android:layout_alignStart="@+id/editText"
-                android:id="@+id/editText3"
+                android:layout_alignLeft="@+id/txtFecha"
+                android:layout_alignStart="@+id/txtFecha"
+                android:id="@+id/txtAreteanterior"
                 android:text="17" />
 
             <EditText
