@@ -13,4 +13,5 @@
     tools:context="com.mifincaapp.mifincaapp.Reidentificacion"
     tools:showIn="@layout/activity_reidentificacion">
 
+
 </RelativeLayout>
