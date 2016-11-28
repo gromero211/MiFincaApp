@@ -18,7 +18,7 @@ import android.widget.Toast;
 import static android.app.Activity.RESULT_OK;
 
 
-public class Inventario_nuevo extends Fragment {
+public class Inventario_nuevo extends Fragment implements View.OnClickListener {
     Button button;
     Button btnCancel;
     RecyclerView mRecyclerView;
@@ -100,6 +100,12 @@ public class Inventario_nuevo extends Fragment {
 
 
     }
+
+    @Override
+    public void onClick(View v) {
+
+    }
+
     public class YourItemSelectedListener implements AdapterView.OnItemSelectedListener {
 
         public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {

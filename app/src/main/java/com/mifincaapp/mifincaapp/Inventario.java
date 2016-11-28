@@ -26,6 +26,7 @@ public class Inventario extends AppCompatActivity {
     public static final String TAG = Inventario.class.getName();
     public static final int FORM_KEY=1;
 
+
    // public static final String TAG = ListaConBusqueda.class.getName();
 
     Toolbar toolbar;
@@ -52,7 +53,8 @@ public class Inventario extends AppCompatActivity {
             }
         });
 //recyclerView
-
+        Fragment fragment = ListadoInventario.getInstance();
+        mostrarFragment(fragment);
 
     }
 
@@ -130,5 +132,6 @@ public class Inventario extends AppCompatActivity {
         }
 
     }
+
 
 }

@@ -28,7 +28,7 @@ public class Db_inventario extends SQLiteOpenHelper {
                     PersonaContract.ARETE_COLUMN+ TEXT_TYPE + SEPARATOR +
                     PersonaContract.AGE_COLUMN + TEXT_TYPE + SEPARATOR +
                     PersonaContract.CATEGORIA_COLUMN + TEXT_TYPE + SEPARATOR +
-                    PersonaContract.RAZA_COLUMN + TEXT_TYPE + SEPARATOR + ")";
+                    PersonaContract.RAZA_COLUMN + TEXT_TYPE + ")";
     static final String SQL_DROP_TABLE = "DROP TABLE IF EXISTS" + PersonaContract.TABLE_NAME;
 
 

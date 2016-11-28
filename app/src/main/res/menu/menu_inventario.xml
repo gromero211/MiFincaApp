@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item android:title="Eliminar"
         android:id="@+id/btnEliminarInventario" />
     <item android:icon="@android:drawable/ic_menu_search"
         android:title="Buscar"
-        android:id="@+id/btnBuscarInventario" />
+        android:id="@+id/btnBuscarInventario"
+        app:showAsAction="always"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        />
 </menu>

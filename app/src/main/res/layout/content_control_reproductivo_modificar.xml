@@ -16,7 +16,7 @@
         android:text="Fecha de Diagnóstico:"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText12"
+        android:layout_below="@+id/txtArete"
         android:layout_alignLeft="@+id/textView40"
         android:layout_alignStart="@+id/textView40"
         android:layout_marginTop="23dp"
@@ -28,16 +28,16 @@
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:id="@+id/editText12"
+        android:id="@+id/txtArete"
         android:text="####"
         android:fontFamily="sans-serif"
         android:textSize="14sp"
         android:textAlignment="center"
         android:layout_alignBottom="@+id/textView40"
-        android:layout_alignLeft="@+id/editText13"
-        android:layout_alignStart="@+id/editText13"
-        android:layout_alignRight="@+id/editText13"
-        android:layout_alignEnd="@+id/editText13" />
+        android:layout_alignLeft="@+id/txtFecha"
+        android:layout_alignStart="@+id/txtFecha"
+        android:layout_alignRight="@+id/txtFecha"
+        android:layout_alignEnd="@+id/txtFecha" />
 
     <TextView
         android:text="Mét. Detección:"
@@ -55,7 +55,7 @@
         android:layout_height="wrap_content"
         android:inputType="date"
         android:ems="10"
-        android:id="@+id/editText13"
+        android:id="@+id/txtFecha"
         android:textAlignment="center"
         android:text="dd/mm/aaaa"
         android:textSize="14sp"
@@ -70,10 +70,10 @@
         android:inputType="textPersonName"
         android:text="método"
         android:ems="10"
-        android:layout_below="@+id/editText13"
-        android:layout_alignLeft="@+id/editText13"
-        android:layout_alignStart="@+id/editText13"
-        android:id="@+id/editText15"
+        android:layout_below="@+id/txtFecha"
+        android:layout_alignLeft="@+id/txtFecha"
+        android:layout_alignStart="@+id/txtFecha"
+        android:id="@+id/txtMetodo"
         android:textAppearance="@style/TextAppearance.AppCompat"
         android:textAlignment="center" />
 
@@ -127,12 +127,12 @@
         android:inputType="textPersonName"
         android:text="nombre"
         android:ems="10"
-        android:id="@+id/editText14"
+        android:id="@+id/txtSemental"
         android:textAppearance="@style/TextAppearance.AppCompat"
         android:textAlignment="center"
-        android:layout_below="@+id/editText15"
-        android:layout_alignLeft="@+id/editText15"
-        android:layout_alignStart="@+id/editText15"
+        android:layout_below="@+id/txtMetodo"
+        android:layout_alignLeft="@+id/txtMetodo"
+        android:layout_alignStart="@+id/txtMetodo"
         android:layout_marginTop="10dp" />
 
     <TextView
@@ -141,8 +141,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/textView41"
         android:textAppearance="@style/TextAppearance.AppCompat"
-        android:layout_alignBaseline="@+id/editText14"
-        android:layout_alignBottom="@+id/editText14"
+        android:layout_alignBaseline="@+id/txtSemental"
+        android:layout_alignBottom="@+id/txtSemental"
         android:layout_alignLeft="@+id/textView44"
         android:layout_alignStart="@+id/textView44" />
 
@@ -151,14 +151,14 @@
         android:layout_height="wrap_content"
         android:inputType="date"
         android:ems="10"
-        android:id="@+id/editText16"
+        android:id="@+id/txtFechaParto"
         android:textAlignment="center"
         android:text="dd/mm/aaaa"
         android:textSize="14sp"
         android:layout_alignBaseline="@+id/textView46"
         android:layout_alignBottom="@+id/textView46"
-        android:layout_alignLeft="@+id/editText14"
-        android:layout_alignStart="@+id/editText14" />
+        android:layout_alignLeft="@+id/txtSemental"
+        android:layout_alignStart="@+id/txtSemental" />
 
     <EditText
         android:layout_width="150dp"
@@ -166,28 +166,28 @@
         android:inputType="textPersonName"
         android:text="nombre"
         android:ems="10"
-        android:id="@+id/editText17"
+        android:id="@+id/txtParto"
         android:textAppearance="@style/TextAppearance.AppCompat"
         android:textAlignment="center"
         android:layout_alignBaseline="@+id/textView47"
         android:layout_alignBottom="@+id/textView47"
-        android:layout_alignLeft="@+id/editText16"
-        android:layout_alignStart="@+id/editText16" />
+        android:layout_alignLeft="@+id/txtFechaParto"
+        android:layout_alignStart="@+id/txtFechaParto" />
 
     <EditText
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:id="@+id/editText18"
+        android:id="@+id/txtCrias"
         android:text="####"
         android:fontFamily="sans-serif"
         android:textSize="14sp"
         android:textAlignment="center"
         android:layout_alignBaseline="@+id/textView48"
         android:layout_alignBottom="@+id/textView48"
-        android:layout_alignLeft="@+id/editText17"
-        android:layout_alignStart="@+id/editText17" />
+        android:layout_alignLeft="@+id/txtParto"
+        android:layout_alignStart="@+id/txtParto" />
 
     <EditText
         android:layout_width="150dp"
@@ -195,12 +195,12 @@
         android:inputType="textPersonName"
         android:text="comentarios"
         android:ems="10"
-        android:id="@+id/editText19"
+        android:id="@+id/txtComentarios"
         android:textAppearance="@style/TextAppearance.AppCompat"
         android:textAlignment="center"
-        android:layout_below="@+id/editText18"
-        android:layout_alignLeft="@+id/editText18"
-        android:layout_alignStart="@+id/editText18" />
+        android:layout_below="@+id/txtCrias"
+        android:layout_alignLeft="@+id/txtCrias"
+        android:layout_alignStart="@+id/txtCrias" />
 
     <TextView
         android:text="N° Arete:"
@@ -220,7 +220,7 @@
         android:text="Modificar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/editText12"
+        android:layout_above="@+id/txtArete"
         android:layout_centerHorizontal="true"
         android:id="@+id/textView43"
         android:textAppearance="@style/TextAppearance.AppCompat"
