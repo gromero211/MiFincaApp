@@ -6,7 +6,6 @@
     tools:context="com.mifincaapp.mifincaapp.Inventario_nuevo">
 
     <!-- TODO: Update blank fragment layout -->
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -38,7 +37,7 @@
             android:inputType="number"
             android:ems="10"
             android:id="@+id/txtArete"
-            android:text="###"
+
             android:textAlignment="center"
             android:textSize="14sp"
             android:layout_alignBaseline="@+id/textView36"
@@ -54,7 +53,7 @@
             android:inputType="numberSigned"
             android:ems="10"
             android:id="@+id/txtEdad"
-            android:text="##"
+
             android:textAppearance="@style/TextAppearance.AppCompat"
             android:textSize="14sp"
 
@@ -96,7 +95,6 @@
             android:id="@+id/txtFecha"
             android:textAlignment="center"
 
-            android:text="dd/mm/aaaa"
             android:textSize="14sp"
             android:layout_alignBaseline="@+id/textView7"
             android:layout_alignBottom="@+id/textView7"
@@ -149,4 +147,5 @@
             android:id="@+id/btnGuardarNuevo" />
 
     </RelativeLayout>
+
 </FrameLayout>

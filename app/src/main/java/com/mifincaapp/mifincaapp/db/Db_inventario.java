@@ -2,13 +2,9 @@ package com.mifincaapp.mifincaapp.db;
 
 import android.content.ContentValues;
 import android.content.Context;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.provider.BaseColumns;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by GARF on 23/11/2016.
@@ -39,6 +35,7 @@ public class Db_inventario extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+        //crea la base de dattos
         db.execSQL(SQL_CREATE_TABLE);
     }
 
@@ -47,7 +44,6 @@ public class Db_inventario extends SQLiteOpenHelper {
         db.execSQL(SQL_DROP_TABLE);
         onCreate(db);
     }
-
     public boolean saveRow(Reg_inventario persona){
         ContentValues contentValues = new ContentValues();
         contentValues.put(PersonaContract.DATE_COLUMN, persona.getFecha());
@@ -58,43 +54,6 @@ public class Db_inventario extends SQLiteOpenHelper {
         long result = this.getWritableDatabase().insert(PersonaContract.TABLE_NAME,null,contentValues);
         return result != -1;
     }
-    public List<Reg_inventario> getList(String filter){
-        List<Reg_inventario> list = new ArrayList<>();
-        SQLiteDatabase database = this.getReadableDatabase();
-        String[] projection = {
-                PersonaContract._ID,
-                PersonaContract.DATE_COLUMN,
-                PersonaContract.ARETE_COLUMN,
-                PersonaContract.AGE_COLUMN,
-                PersonaContract.CATEGORIA_COLUMN,
-                PersonaContract.RAZA_COLUMN,
-                PersonaContract.AGE_COLUMN
-        };
-        String selection = PersonaContract.DATE_COLUMN  +" like ?";
-        String[] selectionArgs = {"%"+filter+"%"};
-        String sortOrder = PersonaContract.DATE_COLUMN + " DESC";
-
-        Cursor c = database.query(
-                PersonaContract.TABLE_NAME,
-                projection,
-                filter.length()>0?selection:null,
-                filter.length()>0?selectionArgs:null,
-                null,
-                null,
-                sortOrder
-        );
-        while (c.moveToNext()){
-            if(c.getString(1)!= null && c.getInt(2) != 0){
-                list.add(new Reg_inventario(c.getString(1),c.getString(2),c.getString(3),c.getString(4),c.getString(5)));
-            }
-        }
-        return list;
-    }
-
-    public static void removeDatabase(Context context) {
-        context.deleteDatabase(DATABASE_NAME);
-    }
-
 
     public class PersonaContract implements BaseColumns {
         public static final String TABLE_NAME= "inventario";

@@ -230,6 +230,17 @@
             android:layout_alignBottom="@+id/textView47"
             android:layout_alignLeft="@+id/txtFechaParto"
             android:layout_alignStart="@+id/txtFechaParto" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:ems="10"
+            android:layout_below="@+id/textView45"
+            android:layout_alignRight="@+id/btnGuardarReproductivo"
+            android:layout_alignEnd="@+id/btnGuardarReproductivo"
+            android:id="@+id/editText" />
     </RelativeLayout>
 
 

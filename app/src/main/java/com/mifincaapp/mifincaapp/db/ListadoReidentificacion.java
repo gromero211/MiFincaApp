@@ -1,32 +1,10 @@
 package com.mifincaapp.mifincaapp.db;
 
-import android.content.Intent;
-import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Toast;
-
-import com.mifincaapp.mifincaapp.Inventario_nuevo;
-import com.mifincaapp.mifincaapp.ListadoInventario;
-import com.mifincaapp.mifincaapp.R;
-import com.mifincaapp.mifincaapp.Reidentificacion_nuevo;
-import com.mifincaapp.mifincaapp.adapters.InventarioAdapter;
-import com.mifincaapp.mifincaapp.adapters.ReidentificacionAdapter;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import static android.app.Activity.RESULT_OK;
-import static com.mifincaapp.mifincaapp.Inventario_nuevo.ACTIVITY_CODE;
 
 
-public class ListadoReidentificacion extends Fragment implements View.OnClickListener{
-
+public class ListadoReidentificacion extends Fragment /*implements View.OnClickListener*/{
+/*
     Db_reidentificacion dbHelper;
     RecyclerView.LayoutManager lManager;
     RecyclerView mRecyclerView;
@@ -105,5 +83,5 @@ public class ListadoReidentificacion extends Fragment implements View.OnClickLis
         listPersona.addAll(dbHelper.getList(newText));
         adapter.notifyDataSetChanged();
     }
-
+*/
 }

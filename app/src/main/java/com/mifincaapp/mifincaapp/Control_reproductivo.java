@@ -1,29 +1,10 @@
 package com.mifincaapp.mifincaapp;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
-import android.util.Log;
-import android.view.View;
-import android.widget.Toast;
-
-import com.mifincaapp.mifincaapp.adapters.ReproduccionAdapter;
-import com.mifincaapp.mifincaapp.db.Db_Control;
-import com.mifincaapp.mifincaapp.db.Reg_Control;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class Control_reproductivo extends AppCompatActivity {
     public static final int FORM_KEY=1;
-    public static final int ACTIVITY_CODE = 1;
+   /* public static final int ACTIVITY_CODE = 1;
 
     public static final String TAG = Control_reproductivo.class.getName();
     Db_Control dbHelper;
@@ -38,11 +19,13 @@ public class Control_reproductivo extends AppCompatActivity {
         setContentView(R.layout.activity_control_reproductivo);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        dbHelper= new Db_Control(this);
 //nuevo
+
         mRecyclerView = (RecyclerView) findViewById(R.id.list);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(linearLayoutManager);
-        initList();
+        //initList();
         adapter = new ReproduccionAdapter(listPersona);
         mRecyclerView.setAdapter(adapter);
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fabReproductivo);
@@ -105,5 +88,5 @@ public class Control_reproductivo extends AppCompatActivity {
         }
 
     }
-
+*/
 }

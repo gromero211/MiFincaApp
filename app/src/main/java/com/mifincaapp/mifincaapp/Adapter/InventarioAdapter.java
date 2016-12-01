@@ -1,4 +1,4 @@
-package com.mifincaapp.mifincaapp.adapters;
+package com.mifincaapp.mifincaapp.Adapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -13,11 +13,12 @@ import com.mifincaapp.mifincaapp.db.Reg_inventario;
 import java.util.List;
 
 /**
- * Created by GARF on 23/11/2016.
+ * Created by GARF on 30/11/2016.
  */
 
-public class InventarioAdapter extends RecyclerView.Adapter<InventarioAdapter.CustomViewHolder> {
-    public static final String TAG = InventarioAdapter.class.getName();
+public class InventarioAdapter  extends RecyclerView.Adapter<InventarioAdapter.CustomViewHolder>{
+    public static final String TAG = InventarioAdapter.class.getSimpleName();
+    public static final int ACTIVITY_CODE = 1;
     List<Reg_inventario> mItems;
 
     public InventarioAdapter(List<Reg_inventario> items) {
@@ -39,7 +40,6 @@ public class InventarioAdapter extends RecyclerView.Adapter<InventarioAdapter.Cu
         holder.mTextEdad.setText(mItems.get(position).getEdad());
         holder.mTextCategoria.setText(mItems.get(position).getCategoria());
         holder.mTextRaza.setText(mItems.get(position).getRaza());
-        //holder.mTextAge.setText(String.valueOf(mItems.get(position).getEdad()));
     }
 
     @Override

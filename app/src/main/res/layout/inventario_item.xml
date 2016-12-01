@@ -7,10 +7,12 @@
     android:padding="4dp">
 
     <TextView
+        android:layout_marginTop="250px"
         android:id="@+id/tvFecha"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="0.5"/>
+        android:layout_weight="0.5"
+        android:text="holaaa"/>
 
     <TextView
         android:id="@+id/tvArete"

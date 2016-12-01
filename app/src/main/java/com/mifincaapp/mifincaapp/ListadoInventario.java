@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.mifincaapp.mifincaapp.adapters.InventarioAdapter;
+import com.mifincaapp.mifincaapp.Adapter.InventarioAdapter;
 import com.mifincaapp.mifincaapp.db.Db_inventario;
 import com.mifincaapp.mifincaapp.db.Reg_inventario;
 
@@ -55,7 +55,7 @@ public class ListadoInventario extends Fragment implements View.OnClickListener{
 
     public void adVista() {
         listPersona = new ArrayList<>();
-        listPersona.addAll(dbHelper.getList(""));
+        //listPersona.addAll(dbHelper.getList(""));
     }
 
     private void inicializarRecicler()
@@ -100,7 +100,7 @@ public class ListadoInventario extends Fragment implements View.OnClickListener{
     }
     private void updateRecycler(String newText) {
         listPersona.clear();
-        listPersona.addAll(dbHelper.getList(newText));
+        //listPersona.addAll(dbHelper.getList(newText));
         adapter.notifyDataSetChanged();
     }
 

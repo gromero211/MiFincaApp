@@ -1,7 +1,7 @@
 package com.mifincaapp.mifincaapp.db;
 
 /**
- * Created by GARF on 23/11/2016.
+ * Created by GARF on 1/12/2016.
  */
 
 public class Reg_inventario {

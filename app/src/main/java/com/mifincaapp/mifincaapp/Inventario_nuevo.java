@@ -1,6 +1,6 @@
 package com.mifincaapp.mifincaapp;
 
-import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -13,14 +13,16 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.Toast;
 
-import static android.app.Activity.RESULT_OK;
+import com.mifincaapp.mifincaapp.db.Db_inventario;
+
+import static com.mifincaapp.mifincaapp.R.array.raza;
 
 
 public class Inventario_nuevo extends Fragment implements View.OnClickListener {
     Button button;
     Button btnCancel;
+    EditText tFecha,tArete,tEdad,tCategoria,tRaza;
     RecyclerView mRecyclerView;
     public static final int ACTIVITY_CODE = 1;
     public static final String FECHA_KEY = "fecha";
@@ -31,7 +33,7 @@ public class Inventario_nuevo extends Fragment implements View.OnClickListener {
     public String cat;
     public String raz;
     View view;
-
+    SQLiteDatabase db;
 
     public Inventario_nuevo() {
 
@@ -52,6 +54,11 @@ public class Inventario_nuevo extends Fragment implements View.OnClickListener {
         view=inflater.inflate(R.layout.fragment_inventario_nuevo,container,false);
 
         Spinner spinner = (Spinner) view.findViewById(R.id.spnCategoria);
+
+        //abrir la base de datos en modo escritura
+        Db_inventario dbInventario = new Db_inventario(getActivity());
+        db = dbInventario.getWritableDatabase();
+
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(),
                 R.array.categoriasNuevoInventario, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -69,7 +76,7 @@ public class Inventario_nuevo extends Fragment implements View.OnClickListener {
         });
         Spinner spinner1 = (Spinner) view.findViewById(R.id.spnRaza);
         ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(getActivity(),
-                R.array.raza, android.R.layout.simple_spinner_item);
+                raza, android.R.layout.simple_spinner_item);
         adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner1.setAdapter(adapter1);
         spinner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -88,12 +95,9 @@ public class Inventario_nuevo extends Fragment implements View.OnClickListener {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finishWithResult();
+                validarVTerminar();
             }
         });
-       // btnCancel = (Button) view.findViewById(R.id.btnCancel);
-       // btnCancel.setOnClickListener(this);
-
 
         return view;
 
@@ -101,47 +105,27 @@ public class Inventario_nuevo extends Fragment implements View.OnClickListener {
 
     }
 
+    private void validarVTerminar() {
+        EditText fecha,arete,edad;//categoria,raza;
+        String categoria,raza;//fecha,arete,edad,
+        categoria=cat;
+        raza=raz;
+        fecha=(EditText)view.findViewById(R.id.txtFecha);
+        arete=(EditText)view.findViewById(R.id.txtArete);
+        edad=(EditText)view.findViewById(R.id.txtEdad);
+
+
+        db.execSQL("INSERT INTO inventario (fecha, arete, edad, categoria, raza)" +
+                    "VALUES ('"+ fecha.getText() + "', '" + arete.getText() + "', '" + edad.getText() + "', '" + categoria + "', '" + raza +"')");
+        db.close();
+
+        getActivity().finish();
+
+    }
+
+
     @Override
     public void onClick(View v) {
 
     }
-
-    public class YourItemSelectedListener implements AdapterView.OnItemSelectedListener {
-
-        public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
-            String selected = parent.getItemAtPosition(pos).toString();
-        }
-
-        public void onNothingSelected(AdapterView parent) {
-            // Do nothing.
-        }
-    }
-    private void finishWithResult() {
-
-        String fecha,arete,edad,categoria,raza;
-
-        fecha = ((EditText) view.findViewById(R.id.txtFecha)).getText().toString();
-        arete = ((EditText) view.findViewById(R.id.txtArete)).getText().toString();
-        edad = ((EditText) view.findViewById(R.id.txtEdad)).getText().toString();
-        categoria=cat;
-        raza=raz;
-        //categoria = ((EditText) view.findViewById(R.id.spnCategoria)).getText().toString();
-       // String stringAge = ((EditText) findViewById(R.id.edad)).getText().toString();
-        if (fecha.length() > 0 && edad.length() > 0) {
-
-            Bundle data = new Bundle();
-            data.putString(FECHA_KEY, fecha);
-            data.putString(ARETE_KEY, arete);
-            data.putString(EDAD_KEY, edad);
-            data.putString(CATEGORIA_KEY, categoria);
-            data.putString(RAZA_KEY, raza);
-            Intent intent = new Intent();
-            intent.putExtras(data);
-            getActivity().setResult(RESULT_OK, intent);
-            getActivity().finish();
-        } else {
-            Toast.makeText(getActivity(), R.string.require_fields, Toast.LENGTH_LONG).show();
-        }
-    }
-
 }
