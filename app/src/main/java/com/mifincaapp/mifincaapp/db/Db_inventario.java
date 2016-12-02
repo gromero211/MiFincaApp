@@ -2,6 +2,7 @@ package com.mifincaapp.mifincaapp.db;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.provider.BaseColumns;
@@ -62,5 +63,12 @@ public class Db_inventario extends SQLiteOpenHelper {
         public static final String AGE_COLUMN = "edad";
         public static final String CATEGORIA_COLUMN = "categoria";
         public static final String RAZA_COLUMN = "raza";
+    }
+    //listar elementos
+    public Cursor getNotes()
+    {
+        String columnas[]={ PersonaContract.DATE_COLUMN,PersonaContract.AGE_COLUMN, PersonaContract.RAZA_COLUMN};
+        Cursor c=this.getReadableDatabase().query(PersonaContract.TABLE_NAME,columnas, null,null,null,null, null);
+        return c;
     }
 }

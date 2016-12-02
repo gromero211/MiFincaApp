@@ -1,5 +1,6 @@
 package com.mifincaapp.mifincaapp;
 
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -118,8 +119,9 @@ public class Inventario_nuevo extends Fragment implements View.OnClickListener {
         db.execSQL("INSERT INTO inventario (fecha, arete, edad, categoria, raza)" +
                     "VALUES ('"+ fecha.getText() + "', '" + arete.getText() + "', '" + edad.getText() + "', '" + categoria + "', '" + raza +"')");
         db.close();
-
-        getActivity().finish();
+        Intent intent=new Intent(view.getContext(),Inventario.class);
+        startActivity(intent);
+        //getActivity().finish();
 
     }
 
