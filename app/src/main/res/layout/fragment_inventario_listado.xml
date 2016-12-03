@@ -6,7 +6,14 @@
 
     <!-- TODO: Update blank fragment layout -->
 
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView11" />
+
     <ListView
+        android:layout_marginTop="50dp"
         android:id="@+id/inventarioList"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

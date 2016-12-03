@@ -74,7 +74,7 @@ public class controlPeso_registrar extends Fragment implements View.OnClickListe
 
 
         db.execSQL("INSERT INTO controlPeso (fecha, arete, edad, raza, peso)" +
-                "VALUES ('"+ fechaRegPeso.getText() + "', '" + arete.getText() + "', '" + edad.getText() + "', '" + raza.getText() + "', '" + peso.getText() + "')");
+                " VALUES ('"+ fechaRegPeso.getText() + "', '" + arete.getText() + "', '" + edad.getText() + "', '" + raza.getText() + "', '" + peso.getText() + "')");
         db.close();
 
         Intent intent=new Intent(view.getContext(), controlPeso.class);

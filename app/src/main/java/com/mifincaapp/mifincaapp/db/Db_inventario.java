@@ -106,7 +106,7 @@ public class Db_inventario extends SQLiteOpenHelper {
     //listar elementos
     public Cursor getNotes()
     {
-        String columnas[]={ PersonaContract._ID, PersonaContract.DATE_COLUMN,PersonaContract.AGE_COLUMN, PersonaContract.RAZA_COLUMN};
+        String columnas[]={ PersonaContract._ID,PersonaContract.ARETE_COLUMN, PersonaContract.DATE_COLUMN,PersonaContract.AGE_COLUMN, PersonaContract.RAZA_COLUMN};
         Cursor c=this.getReadableDatabase().query(PersonaContract.TABLE_NAME,columnas, null,null,null,null, null);
         return c;
     }
