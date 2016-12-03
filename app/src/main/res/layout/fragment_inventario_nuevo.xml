@@ -16,7 +16,7 @@
             android:layout_marginTop="79dp"
             android:id="@+id/textView37"
             android:textAppearance="@style/TextAppearance.AppCompat"
-            android:layout_below="@+id/txtFechaRei"
+            android:layout_below="@+id/txtFechaRegistrarPeso"
             android:layout_alignLeft="@+id/textView7"
             android:layout_alignStart="@+id/textView7" />
 
@@ -26,7 +26,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView36"
             android:textAppearance="@style/TextAppearance.AppCompat"
-            android:layout_below="@+id/txtFechaRei"
+            android:layout_below="@+id/txtFechaRegistrarPeso"
             android:layout_alignLeft="@+id/textView7"
             android:layout_alignStart="@+id/textView7"
             android:layout_marginTop="23dp" />
@@ -42,10 +42,10 @@
             android:textSize="14sp"
             android:layout_alignBaseline="@+id/textView36"
             android:layout_alignBottom="@+id/textView36"
-            android:layout_alignLeft="@+id/txtFechaRei"
-            android:layout_alignStart="@+id/txtFechaRei"
-            android:layout_alignRight="@+id/txtFechaRei"
-            android:layout_alignEnd="@+id/txtFechaRei" />
+            android:layout_alignLeft="@+id/txtFechaRegistrarPeso"
+            android:layout_alignStart="@+id/txtFechaRegistrarPeso"
+            android:layout_alignRight="@+id/txtFechaRegistrarPeso"
+            android:layout_alignEnd="@+id/txtFechaRegistrarPeso" />
 
         <EditText
             android:layout_width="50dp"
@@ -92,7 +92,7 @@
             android:layout_height="wrap_content"
             android:inputType="date"
             android:ems="10"
-            android:id="@+id/txtFechaRei"
+            android:id="@+id/txtFechaRegistrarPeso"
             android:textAlignment="center"
 
             android:textSize="14sp"

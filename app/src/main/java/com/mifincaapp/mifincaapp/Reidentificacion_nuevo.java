@@ -67,8 +67,8 @@ public class Reidentificacion_nuevo extends Fragment implements View.OnClickList
     private void validarVTerminar() {
         EditText fechaRei, areteanterior, aretenuevo, motivocambio;
 
-        fechaRei=(EditText)view.findViewById(R.id.txtFechaRei);
-        areteanterior=(EditText)view.findViewById(R.id.txtAreteanterior);
+        fechaRei=(EditText)view.findViewById(R.id.txtFechaRegistrarPeso);
+        areteanterior=(EditText)view.findViewById(R.id.txtArete);
         aretenuevo=(EditText)view.findViewById(R.id.txtAretenuevo);
         motivocambio=(EditText)view.findViewById(R.id.txtMotivocambio);
 
@@ -100,8 +100,8 @@ public class Reidentificacion_nuevo extends Fragment implements View.OnClickList
 
         String fechaRei,areteanterior,aretenuevo,motivocambio;
 
-        fechaRei = ((EditText) view.findViewById(R.id.txtFechaRei)).getText().toString();
-        areteanterior = ((EditText) view.findViewById(R.id.txtAreteanterior)).getText().toString();
+        fechaRei = ((EditText) view.findViewById(R.id.txtFechaRegistrarPeso)).getText().toString();
+        areteanterior = ((EditText) view.findViewById(R.id.txtArete)).getText().toString();
         aretenuevo = ((EditText) view.findViewById(R.id.txtAretenuevo)).getText().toString();
         motivocambio = ((EditText) view.findViewById(R.id.txtMotivocambio)).getText().toString();
 

@@ -10,39 +10,23 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+import com.mifincaapp.mifincaapp.db.Db_inventario;
+
 public class controlPeso extends AppCompatActivity {
+    public static final String TAG = controlPeso.class.getName();
     public static final int FORM_KEY=1;
+
+    Toolbar toolbar;
+    Db_inventario dbHelper;
+    FloatingActionButton fab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_control_peso);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarControlPeso);
         setSupportActionBar(toolbar);
 
-        findViewById(R.id.buttonBuscarPeso).setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View view) {
-                controlPeso.this.startActivity(new Intent(controlPeso.this, control_peso_buscar.class));
-            }
-        });
-
-        findViewById(R.id.buttonEliminarPeso).setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View view) {
-                controlPeso.this.startActivity(new Intent(controlPeso.this, control_peso_eliminar.class));
-            }
-        });
-
-        findViewById(R.id.buttonEditarPeso).setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View view) {
-                controlPeso.this.startActivity(new Intent(controlPeso.this, control_peso_editar.class));
-            }
-        });
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fabControlPeso);
         fab.setOnClickListener(new View.OnClickListener() {

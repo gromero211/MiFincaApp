@@ -34,10 +34,10 @@
         android:textSize="14sp"
         android:textAlignment="center"
         android:layout_alignBottom="@+id/textView40"
-        android:layout_alignLeft="@+id/txtFechaRei"
-        android:layout_alignStart="@+id/txtFechaRei"
-        android:layout_alignRight="@+id/txtFechaRei"
-        android:layout_alignEnd="@+id/txtFechaRei" />
+        android:layout_alignLeft="@+id/txtFechaRegistrarPeso"
+        android:layout_alignStart="@+id/txtFechaRegistrarPeso"
+        android:layout_alignRight="@+id/txtFechaRegistrarPeso"
+        android:layout_alignEnd="@+id/txtFechaRegistrarPeso" />
 
     <TextView
         android:text="Mét. Detección:"
@@ -55,7 +55,7 @@
         android:layout_height="wrap_content"
         android:inputType="date"
         android:ems="10"
-        android:id="@+id/txtFechaRei"
+        android:id="@+id/txtFechaRegistrarPeso"
         android:textAlignment="center"
         android:text="dd/mm/aaaa"
         android:textSize="14sp"
@@ -70,9 +70,9 @@
         android:inputType="textPersonName"
         android:text="método"
         android:ems="10"
-        android:layout_below="@+id/txtFechaRei"
-        android:layout_alignLeft="@+id/txtFechaRei"
-        android:layout_alignStart="@+id/txtFechaRei"
+        android:layout_below="@+id/txtFechaRegistrarPeso"
+        android:layout_alignLeft="@+id/txtFechaRegistrarPeso"
+        android:layout_alignStart="@+id/txtFechaRegistrarPeso"
         android:id="@+id/txtMetodo"
         android:textAppearance="@style/TextAppearance.AppCompat"
         android:textAlignment="center" />
