@@ -110,4 +110,11 @@ public class Db_inventario extends SQLiteOpenHelper {
         Cursor c=this.getReadableDatabase().query(PersonaContract.TABLE_NAME,columnas, null,null,null,null, null);
         return c;
     }
+    //elementos para modificar
+    public Cursor getElements()
+    {
+        String columnas[]={PersonaContract._ID,PersonaContract.DATE_COLUMN, PersonaContract.ARETE_COLUMN,PersonaContract.AGE_COLUMN,PersonaContract.CATEGORIA_COLUMN,PersonaContract.RAZA_COLUMN};
+        Cursor c1=this.getWritableDatabase().query(PersonaContract.TABLE_NAME,columnas,null,null,null,null, null);
+        return c1;
+    }
 }

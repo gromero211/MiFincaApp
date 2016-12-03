@@ -71,12 +71,10 @@ public class Inventario_listado extends Fragment {
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                //muestra el nuevo fragment
-                //
-                //na.setText("Población de "+ lv1.getItemAtPosition(posicion) + " es "+ habitantes[posicion]);
+
                  TextView tv1=(TextView)view.findViewById(R.id.textView11);
                 String aret= (String) lista.getItemAtPosition(position);
-//                tv1.setText("posicion: "+lista.getItemIdAtPosition(position)+ " es " );
+
                Toast.makeText(getContext(), aret, Toast.LENGTH_SHORT).show();
                 Db_inventario dbInventario = new Db_inventario(getActivity());
                 data = dbInventario.getWritableDatabase();

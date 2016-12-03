@@ -1,5 +1,6 @@
 package com.mifincaapp.mifincaapp;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -13,6 +14,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.app.AlertDialog;
 
 import com.mifincaapp.mifincaapp.db.Db_inventario;
 
@@ -95,7 +97,24 @@ public class Inventario_nuevo extends Fragment implements View.OnClickListener {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                validarVTerminar();
+
+                //alert
+                AlertDialog.Builder dialogo1 = new AlertDialog.Builder(getContext());
+                dialogo1.setTitle("Confirmación");
+                dialogo1.setMessage("¿ Desea guardar los datos ?");
+                dialogo1.setCancelable(false);
+                dialogo1.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialogo1, int id) {
+                        validarVTerminar();
+                    }
+                });
+                dialogo1.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialogo1, int id) {
+                        Intent intent=new Intent(view.getContext(),Inventario.class);
+                        startActivity(intent);
+                    }
+                });
+                dialogo1.show();
             }
         });
 
@@ -129,4 +148,5 @@ public class Inventario_nuevo extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
 
     }
+
 }
