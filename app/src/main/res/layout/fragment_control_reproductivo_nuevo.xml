@@ -37,10 +37,10 @@
             android:textSize="14sp"
             android:textAlignment="center"
             android:layout_alignBottom="@+id/textView40"
-            android:layout_alignLeft="@+id/txtFecha"
-            android:layout_alignStart="@+id/txtFecha"
-            android:layout_alignRight="@+id/txtFecha"
-            android:layout_alignEnd="@+id/txtFecha" />
+            android:layout_alignLeft="@+id/txtFechaRei"
+            android:layout_alignStart="@+id/txtFechaRei"
+            android:layout_alignRight="@+id/txtFechaRei"
+            android:layout_alignEnd="@+id/txtFechaRei" />
 
         <TextView
             android:text="Mét. Detección:"
@@ -58,7 +58,7 @@
             android:layout_height="wrap_content"
             android:inputType="date"
             android:ems="10"
-            android:id="@+id/txtFecha"
+            android:id="@+id/txtFechaRei"
             android:textAlignment="center"
             android:textSize="14sp"
             android:layout_alignBaseline="@+id/textView42"
@@ -71,9 +71,9 @@
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:layout_below="@+id/txtFecha"
-            android:layout_alignLeft="@+id/txtFecha"
-            android:layout_alignStart="@+id/txtFecha"
+            android:layout_below="@+id/txtFechaRei"
+            android:layout_alignLeft="@+id/txtFechaRei"
+            android:layout_alignStart="@+id/txtFechaRei"
             android:id="@+id/txtMetodo"
             android:textAppearance="@style/TextAppearance.AppCompat"
             android:textAlignment="center" />

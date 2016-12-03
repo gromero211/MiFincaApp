@@ -27,6 +27,14 @@ public class Db_inventario extends SQLiteOpenHelper {
                     PersonaContract.RAZA_COLUMN + TEXT_TYPE + ")";
     static final String SQL_DROP_TABLE = "DROP TABLE IF EXISTS" + PersonaContract.TABLE_NAME;
 
+    static final String SQL_CREATE_TABLE2 =
+            "CREATE TABLE "+ PersonaContract.TABLE_NAME +
+                    " (" + PersonaContract._ID + " INTEGER PRIMARY KEY"+ SEPARATOR +
+                    PersonaContract.DATE_COLUMN + TEXT_TYPE + SEPARATOR +
+                    PersonaContract.ARETEANTERIOR_COLUMN+ TEXT_TYPE + SEPARATOR +
+                    PersonaContract.ARETENUEVO_COLUMN + TEXT_TYPE + SEPARATOR +
+                    PersonaContract.MOTIVOCAMBIO_COLUMN + TEXT_TYPE + ")";
+    static final String SQL_DROP_TABLE2 = "DROP TABLE IF EXISTS" + PersonaContract.TABLE_NAME;
 
 
     public Db_inventario(Context context){
@@ -37,11 +45,14 @@ public class Db_inventario extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         //crea la base de dattos
         db.execSQL(SQL_CREATE_TABLE);
+        db.execSQL(SQL_CREATE_TABLE2);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL(SQL_DROP_TABLE);
+        onCreate(db);
+        db.execSQL(SQL_DROP_TABLE2);
         onCreate(db);
     }
     public boolean saveRow(Reg_inventario persona){
@@ -62,5 +73,13 @@ public class Db_inventario extends SQLiteOpenHelper {
         public static final String AGE_COLUMN = "edad";
         public static final String CATEGORIA_COLUMN = "categoria";
         public static final String RAZA_COLUMN = "raza";
+
+
+        /*Ekaterina*/
+        public static final String TABLE_NAME2= "reidentificacion";
+        public static final String DATE_COLUMN2= "fecha";
+        public static final String ARETEANTERIOR_COLUMN = "areteanterior";
+        public static final String ARETENUEVO_COLUMN = "aretenuevo";
+        public static final String MOTIVOCAMBIO_COLUMN = "motivocambio";
     }
 }

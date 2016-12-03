@@ -10,7 +10,7 @@
         android:layout_marginTop="79dp"
         android:id="@+id/textView37"
         android:textAppearance="@style/TextAppearance.AppCompat"
-        android:layout_below="@+id/txtFecha"
+        android:layout_below="@+id/txtFechaRei"
         android:layout_alignLeft="@+id/textView7"
         android:layout_alignStart="@+id/textView7" />
 
@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/textView36"
         android:textAppearance="@style/TextAppearance.AppCompat"
-        android:layout_below="@+id/txtFecha"
+        android:layout_below="@+id/txtFechaRei"
         android:layout_alignLeft="@+id/textView7"
         android:layout_alignStart="@+id/textView7"
         android:layout_marginTop="23dp" />
@@ -36,10 +36,10 @@
         android:textSize="14sp"
         android:layout_alignBaseline="@+id/textView36"
         android:layout_alignBottom="@+id/textView36"
-        android:layout_alignLeft="@+id/txtFecha"
-        android:layout_alignStart="@+id/txtFecha"
-        android:layout_alignRight="@+id/txtFecha"
-        android:layout_alignEnd="@+id/txtFecha" />
+        android:layout_alignLeft="@+id/txtFechaRei"
+        android:layout_alignStart="@+id/txtFechaRei"
+        android:layout_alignRight="@+id/txtFechaRei"
+        android:layout_alignEnd="@+id/txtFechaRei" />
 
     <EditText
         android:layout_width="50dp"
@@ -86,7 +86,7 @@
         android:layout_height="wrap_content"
         android:inputType="date"
         android:ems="10"
-        android:id="@+id/txtFecha"
+        android:id="@+id/txtFechaRei"
         android:textAlignment="center"
 
         android:text="dd/mm/aaaa"

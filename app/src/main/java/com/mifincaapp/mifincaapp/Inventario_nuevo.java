@@ -110,7 +110,7 @@ public class Inventario_nuevo extends Fragment implements View.OnClickListener {
         String categoria,raza;//fecha,arete,edad,
         categoria=cat;
         raza=raz;
-        fecha=(EditText)view.findViewById(R.id.txtFecha);
+        fecha=(EditText)view.findViewById(R.id.txtFechaRei);
         arete=(EditText)view.findViewById(R.id.txtArete);
         edad=(EditText)view.findViewById(R.id.txtEdad);
 

@@ -14,8 +14,8 @@ import java.util.List;
  * Created by USUARIO on 27/11/2016.
  */
 
-public class Db_reidentificacion extends SQLiteOpenHelper {
-    static final int DATABASE_VERSION= 1;
+public class Db_reidentificacion  {
+   /* static final int DATABASE_VERSION= 1;
     static final String DATABASE_NAME = "Reidentificacion.db";
     static final String SEPARATOR = ",";
     private static final String TEXT_TYPE = " TEXT";
@@ -98,6 +98,6 @@ public class Db_reidentificacion extends SQLiteOpenHelper {
         public static final String ARETEANTERIOR_COLUMN = "areteanterior";
         public static final String ARETENUEVO_COLUMN = "aretenuevo";
         public static final String MOTIVOCAMBIO_COLUMN = "motivocambio";
-    }
+    }*/
 }
 
