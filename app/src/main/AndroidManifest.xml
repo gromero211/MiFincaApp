@@ -55,6 +55,10 @@
         <activity
             android:name=".Reidentificacion"
             android:label="@string/title_activity_reidentificacion"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".control_medicamento"
+            android:label="@string/title_activity_control_medicamento"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

@@ -109,7 +109,8 @@ public class MainActivity extends AppCompatActivity
             Intent intent=new Intent(MainActivity.this, Control_reproductivo.class);
             startActivityForResult(intent,Control_reproductivo.FORM_KEY);
         } else if (id == R.id.medicamentos) {
-
+            Intent intent=new Intent(MainActivity.this, control_medicamento.class);
+            startActivityForResult(intent,control_medicamento.FORM_KEY);
         } else if (id == R.id.Peso) {
             Intent intent=new Intent(MainActivity.this, controlPeso.class);
             startActivityForResult(intent, controlPeso.FORM_KEY);

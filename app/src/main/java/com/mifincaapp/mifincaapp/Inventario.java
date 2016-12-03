@@ -11,15 +11,15 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.mifincaapp.mifincaapp.Adapter.InventarioAdapter;
-import com.mifincaapp.mifincaapp.db.Db_inventario;
-
 public class Inventario extends AppCompatActivity{
     public static final String TAG = Inventario.class.getName();
     public static final int FORM_KEY=1;
 
-    Db_inventario dbHelper;
-    InventarioAdapter adapter;
+
+
+    public Inventario() {
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +27,8 @@ public class Inventario extends AppCompatActivity{
         setContentView(R.layout.activity_inventario);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        dbHelper = new Db_inventario(this);
+        Fragment fragment=Inventario_listado.getInstance();
+        mostrarFragment(fragment);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fabInventario);
         fab.setOnClickListener(new View.OnClickListener() {
