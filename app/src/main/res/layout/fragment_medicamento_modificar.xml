@@ -1,0 +1,94 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".medicamento_modificar">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <Button
+        android:text="Modificar"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="92dp"
+        android:id="@+id/btnmodidcar" />
+
+        <TextView
+            android:text="Nombre del ptoducto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView49"
+            android:layout_marginLeft="37dp"
+            android:layout_marginStart="37dp"
+            android:layout_marginBottom="20dp"
+            android:layout_above="@+id/textView51"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:text="Dosis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView50"
+            android:textSize="18sp"
+            android:layout_marginRight="29dp"
+            android:layout_marginEnd="29dp"
+            android:layout_marginBottom="141dp"
+            android:layout_above="@+id/btnGuardarNuevo"
+            android:layout_toLeftOf="@+id/btnGuardarNuevo"
+            android:layout_toStartOf="@+id/btnGuardarNuevo" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:ems="10"
+            android:layout_above="@+id/textView51"
+            android:layout_toRightOf="@+id/textView49"
+            android:layout_toEndOf="@+id/textView49"
+            android:layout_marginLeft="22dp"
+            android:layout_marginStart="22dp"
+            android:id="@+id/editText10" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:ems="10"
+            android:layout_alignTop="@+id/textView50"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/editText12" />
+
+        <TextView
+        android:text="Tipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView51"
+        android:textSize="18sp"
+            android:layout_marginBottom="25dp"
+            android:layout_above="@+id/textView50"
+            android:layout_alignRight="@+id/textView50"
+            android:layout_alignEnd="@+id/textView50"
+            android:layout_marginRight="22dp"
+            android:layout_marginEnd="22dp" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textView51"
+            android:layout_toRightOf="@+id/textView51"
+            android:layout_toEndOf="@+id/textView51"
+            android:layout_marginLeft="32dp"
+            android:layout_marginStart="32dp"
+            android:id="@+id/spinner3" />
+
+    </RelativeLayout>
+</FrameLayout>

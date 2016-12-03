@@ -1,0 +1,108 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".medicamento_guardar">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:text="Guardar"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="92dp"
+            android:id="@+id/btnGuardarNuevo" />
+
+        <TextView
+            android:text="Nombre del ptoducto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:id="@+id/textView49"
+            android:layout_below="@+id/textView39"
+            android:layout_toLeftOf="@+id/btnGuardarNuevo"
+            android:layout_toStartOf="@+id/btnGuardarNuevo" />
+
+        <TextView
+            android:text="Dosis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView49"
+            android:layout_alignLeft="@+id/textView39"
+            android:layout_alignStart="@+id/textView39"
+            android:layout_marginTop="24dp"
+            android:id="@+id/textView50"
+            android:textSize="18sp" />
+
+        <TextView
+            android:text="Tipo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView51"
+            android:textSize="18sp"
+            android:layout_alignTop="@+id/spinner"
+            android:layout_alignRight="@+id/textView50"
+            android:layout_alignEnd="@+id/textView50"
+            android:layout_marginRight="23dp"
+            android:layout_marginEnd="23dp" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/textView50"
+            android:layout_toEndOf="@+id/textView50" />
+
+        <TextView
+            android:text="Fecha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="89dp"
+            android:id="@+id/textView39"
+            android:textSize="18sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/textView49"
+            android:layout_alignStart="@+id/textView49"
+            android:layout_marginLeft="38dp"
+            android:layout_marginStart="38dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editText3"
+            android:layout_alignBaseline="@+id/textView39"
+            android:layout_alignBottom="@+id/textView39"
+            android:layout_toRightOf="@+id/textView49"
+            android:layout_toEndOf="@+id/textView49" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editText7"
+            android:layout_alignTop="@+id/textView50"
+            android:layout_alignRight="@+id/editText9"
+            android:layout_alignEnd="@+id/editText9" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editText9"
+            android:layout_alignBaseline="@+id/textView49"
+            android:layout_alignBottom="@+id/textView49"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+</FrameLayout>
