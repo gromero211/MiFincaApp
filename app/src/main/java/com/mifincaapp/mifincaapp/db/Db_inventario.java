@@ -29,9 +29,9 @@ public class Db_inventario extends SQLiteOpenHelper {
     static final String SQL_DROP_TABLE = "DROP TABLE IF EXISTS" + PersonaContract.TABLE_NAME;
 
     static final String SQL_CREATE_TABLE2 =
-            "CREATE TABLE "+ PersonaContract.TABLE_NAME +
+            "CREATE TABLE "+ PersonaContract.TABLE_NAME2 +
                     " (" + PersonaContract._ID + " INTEGER PRIMARY KEY"+ SEPARATOR +
-                    PersonaContract.DATE_COLUMN + TEXT_TYPE + SEPARATOR +
+                    PersonaContract.DATE_COLUMN2 + TEXT_TYPE + SEPARATOR +
                     PersonaContract.ARETEANTERIOR_COLUMN+ TEXT_TYPE + SEPARATOR +
                     PersonaContract.ARETENUEVO_COLUMN + TEXT_TYPE + SEPARATOR +
                     PersonaContract.MOTIVOCAMBIO_COLUMN + TEXT_TYPE + ")";

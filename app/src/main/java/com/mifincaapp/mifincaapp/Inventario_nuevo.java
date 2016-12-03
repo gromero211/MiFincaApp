@@ -5,7 +5,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,7 +23,7 @@ public class Inventario_nuevo extends Fragment implements View.OnClickListener {
     Button button;
     Button btnCancel;
     EditText tFecha,tArete,tEdad,tCategoria,tRaza;
-    RecyclerView mRecyclerView;
+
     public static final int ACTIVITY_CODE = 1;
     public static final String FECHA_KEY = "fecha";
     public static final String ARETE_KEY = "arete";

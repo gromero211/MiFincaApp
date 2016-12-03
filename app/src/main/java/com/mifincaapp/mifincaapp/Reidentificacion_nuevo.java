@@ -13,6 +13,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.mifincaapp.mifincaapp.db.Db_inventario;
+
 import static android.app.Activity.RESULT_OK;
 
 
@@ -43,6 +45,10 @@ public class Reidentificacion_nuevo extends Fragment implements View.OnClickList
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         view=inflater.inflate(R.layout.fragment_reidentificacion_nuevo,container,false);
+
+        //abrir la base de datos en modo escritura
+        Db_inventario dbInventario = new Db_inventario(getActivity());
+        db = dbInventario.getWritableDatabase();
 
         //boton guardar
         button = (Button) view.findViewById(R.id.btnGuardarNuevoRei);
