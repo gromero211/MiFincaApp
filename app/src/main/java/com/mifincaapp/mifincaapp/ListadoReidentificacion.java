@@ -1,4 +1,4 @@
-package com.mifincaapp.mifincaapp.db;
+package com.mifincaapp.mifincaapp;
 
 import android.support.v4.app.Fragment;
 

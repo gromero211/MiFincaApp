@@ -45,7 +45,7 @@ public class Control_reproductivo_nuevo extends Fragment implements View.OnClick
         String diagnostico,arete,deteccion,semental,parto,desarrollo,crias,comentarios;
 
         arete = ((EditText) view.findViewById(R.id.txtArete)).getText().toString();
-        diagnostico = ((EditText) view.findViewById(R.id.txtFecha)).getText().toString();
+        diagnostico = ((EditText) view.findViewById(R.id.txtFechaRegistrarPeso)).getText().toString();
         deteccion = ((EditText) view.findViewById(R.id.txtMetodo)).getText().toString();
         semental = ((EditText) view.findViewById(R.id.txtSemental)).getText().toString();
         parto = ((EditText) view.findViewById(R.id.txtFechaParto)).getText().toString();

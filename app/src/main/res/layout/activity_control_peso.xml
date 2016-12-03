@@ -13,10 +13,10 @@
         android:theme="@style/AppTheme.AppBarOverlay">
 
         <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
+            android:id="@+id/toolbarControlPeso"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="@android:color/holo_green_dark"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>
@@ -37,28 +37,7 @@
         android:id="@+id/textView2"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="120dp"/>
-    <Button
-        android:text="Buscar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/buttonBuscarPeso"
-        android:layout_marginTop="230dp"
-        android:layout_marginLeft="150dp"/>
-    <Button
-        android:text="Eliminar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/buttonEliminarPeso"
-        android:layout_marginTop="310dp"
-        android:layout_marginLeft="150dp"/>
 
-    <Button
-        android:text="Editar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/buttonEditarPeso"
-        android:layout_marginTop="390dp"
-        android:layout_marginLeft="150dp"/>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fabControlPeso"
