@@ -6,8 +6,11 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.mifincaapp.mifincaapp.db.Db_inventario;
 
@@ -20,6 +23,7 @@ public class Inventario_listado extends Fragment {
     ListView lista;
     Db_inventario db;
     List<String> item = null;
+    TextView tv_inId, tv_inArete;
     public Inventario_listado() {
         // Required empty public constructor
     }
@@ -45,15 +49,16 @@ public class Inventario_listado extends Fragment {
         db=new Db_inventario(view.getContext());
         Cursor c= db.getNotes();
         item=new ArrayList<String>();
-        String fecha="",edad="",raza="";
+        String id="",fecha="",edad="",raza="";
 
 
             //recorremos los registros del objeto cursor C
            while (c.moveToNext()){
-                fecha=c.getString(0);
-                edad=c.getString(1);
-                raza=c.getString(2);
-                item.add(fecha + " " + edad + " " + raza);
+               id=c.getString(0);
+                fecha=c.getString(1);
+                edad=c.getString(2);
+                raza=c.getString(3);
+                item.add(id + " " + fecha + " " + edad + " " + raza);
             }
 
 
@@ -61,6 +66,12 @@ public class Inventario_listado extends Fragment {
         ArrayAdapter<String> adaptador =
                 new ArrayAdapter<String>(view.getContext(),android.R.layout.simple_list_item_1, item);
         lista.setAdapter(adaptador);
+        lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(getContext(), "Position: "+position, Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
 

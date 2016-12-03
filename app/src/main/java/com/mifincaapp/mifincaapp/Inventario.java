@@ -27,6 +27,7 @@ public class Inventario extends AppCompatActivity{
         setContentView(R.layout.activity_inventario);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        //fragment listado
         Fragment fragment=Inventario_listado.getInstance();
         mostrarFragment(fragment);
 
