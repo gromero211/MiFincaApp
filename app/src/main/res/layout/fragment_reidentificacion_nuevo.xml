@@ -54,7 +54,6 @@
             android:layout_below="@+id/textView3"
             android:layout_alignLeft="@+id/textID"
             android:layout_alignStart="@+id/textID"
-            android:text="20/11/16"
             android:textAlignment="center"
             android:id="@+id/txtFechaRegistrarPeso"
             android:layout_marginTop="10dp"/>
@@ -69,14 +68,12 @@
             android:layout_below="@+id/textView5"
             android:layout_alignLeft="@+id/txtFechaRegistrarPeso"
             android:layout_alignStart="@+id/txtFechaRegistrarPeso"
-            android:id="@+id/txtArete"
-            android:text="29" />
+            android:id="@+id/txtArete" />
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="number"
-            android:text="5"
             android:textAlignment="center"
             android:ems="8"
             android:id="@+id/textID"
@@ -100,7 +97,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="number"
-            android:text="368"
             android:textAlignment="center"
             android:ems="10"
             android:id="@+id/txtAretenuevo"
@@ -120,12 +116,9 @@
             android:layout_marginTop="220dp"/>
 
         <EditText
-            android:text="P"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:inputType="text"
             android:id="@+id/txtMotivocambio"
-            tools:text="Perdida arete"
             android:layout_alignBaseline="@+id/textView13"
             android:layout_alignBottom="@+id/textView13"
             android:layout_toRightOf="@+id/textView10"
@@ -133,7 +126,8 @@
             android:layout_marginStart="19dp"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
-            android:textAlignment="center"/>
+            android:textAlignment="center"
+            android:inputType="text" />
 
         <Button
             android:text="Guardar"

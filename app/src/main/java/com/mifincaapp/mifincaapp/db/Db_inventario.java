@@ -35,17 +35,17 @@ public class Db_inventario extends SQLiteOpenHelper {
                     PersonaContract.ARETEANTERIOR_COLUMN+ TEXT_TYPE + SEPARATOR +
                     PersonaContract.ARETENUEVO_COLUMN + TEXT_TYPE + SEPARATOR +
                     PersonaContract.MOTIVOCAMBIO_COLUMN + TEXT_TYPE + ")";
-    static final String SQL_DROP_TABLE2 = "DROP TABLE IF EXISTS" + PersonaContract.TABLE_NAME;
+    static final String SQL_DROP_TABLE2 = "DROP TABLE IF EXISTS" + PersonaContract.TABLE_NAME2;
 
     static final String SQL_CREATE_TABLE3 =
             "CREATE TABLE "+ PersonaContract.TABLE_NAME3 +
                     " (" + PersonaContract._ID + " INTEGER PRIMARY KEY"+ SEPARATOR +
                     PersonaContract.DATE_COLUMN3 + TEXT_TYPE + SEPARATOR +
                     PersonaContract.ARETE_COLUMN3+ TEXT_TYPE + SEPARATOR +
-                    PersonaContract.AGE_COLUMN3 + TEXT_TYPE + SEPARATOR +
+                    PersonaContract.EDAD_COLUMN3 + TEXT_TYPE + SEPARATOR +
                     PersonaContract.RAZA_COLUMN3 + TEXT_TYPE + SEPARATOR +
-                    PersonaContract.PESO_COLUMN + TEXT_TYPE + ")";
-    static final String SQL_DROP_TABLE3 = "DROP TABLE IF EXISTS" + PersonaContract.TABLE_NAME;
+                    PersonaContract.PESO_COLUMN3 + TEXT_TYPE + ")";
+    static final String SQL_DROP_TABLE3 = "DROP TABLE IF EXISTS" + PersonaContract.TABLE_NAME3;
 
 
     public Db_inventario(Context context){
@@ -58,6 +58,7 @@ public class Db_inventario extends SQLiteOpenHelper {
         db.execSQL(SQL_CREATE_TABLE);
         db.execSQL(SQL_CREATE_TABLE2);
         db.execSQL(SQL_CREATE_TABLE3);
+
     }
 
     @Override
@@ -96,12 +97,13 @@ public class Db_inventario extends SQLiteOpenHelper {
         public static final String ARETENUEVO_COLUMN = "aretenuevo";
         public static final String MOTIVOCAMBIO_COLUMN = "motivocambio";
 
-        public static final String TABLE_NAME3= "controlPeso";
+        public static final String TABLE_NAME3= "controlpeso";
         public static final String DATE_COLUMN3= "fecha";
         public static final String ARETE_COLUMN3 = "arete";
-        public static final String AGE_COLUMN3 = "edad";
+        public static final String EDAD_COLUMN3 = "edad";
         public static final String RAZA_COLUMN3 = "raza";
-        public static final String PESO_COLUMN = "peso";
+        public static final String PESO_COLUMN3 = "peso";
+
     }
     //listar elementos
     public Cursor getNotes()
