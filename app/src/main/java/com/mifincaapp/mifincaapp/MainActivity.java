@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity
                         .setAction("Action", null).show();
             }
         });*/
-        
+
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -113,8 +113,8 @@ public class MainActivity extends AppCompatActivity
             startActivityForResult(intent, controlPeso.FORM_KEY);
         }
          else if (id == R.id.Cambios) {
-            Intent intent=new Intent(MainActivity.this, Reidentificacion.class);
-            startActivityForResult(intent, Reidentificacion.FORM_KEY);
+            Intent intent=new Intent(MainActivity.this, Bajas.class);
+            startActivityForResult(intent, Bajas.FORM_KEY);
         }
 
        /* } else if (id == R.id.nav_share) {

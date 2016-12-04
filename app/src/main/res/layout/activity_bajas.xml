@@ -9,11 +9,10 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.mifincaapp.mifincaapp.Bajas">
+    <FrameLayout
 
-    <ListView
-        android:layout_marginTop="50dp"
-        android:id="@+id/bajasList"
+        android:layout_marginTop="75dp"
+        android:id="@+id/contentBajas"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
+        android:layout_height="match_parent"/>
 </RelativeLayout>

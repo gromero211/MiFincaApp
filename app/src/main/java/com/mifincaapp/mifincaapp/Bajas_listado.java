@@ -1,9 +1,8 @@
 package com.mifincaapp.mifincaapp;
 
-import android.content.Context;
+import android.content.DialogInterface;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -12,27 +11,27 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
+import android.app.AlertDialog;
 
-import com.mifincaapp.mifincaapp.R;
 import com.mifincaapp.mifincaapp.db.Db_inventario;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class bajas_listado extends Fragment {
+
+public class Bajas_listado extends Fragment {
     View view;
     ListView lista;
     Db_inventario db;
     SQLiteDatabase data;
     List<String> item = null;
-    TextView tv_inId, tv_inArete;
-    public bajas_listado() {
+
+
+    public Bajas_listado() {
         // Required empty public constructor
     }
-    public static bajas_listado getInstance(){
-        bajas_listado fragment=new bajas_listado();
+    public static Bajas_listado getInstance(){
+        Bajas_listado fragment=new Bajas_listado();
         return fragment;
 
     }
@@ -40,12 +39,11 @@ public class bajas_listado extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-
         // Inflate the layout for this fragment
-        view=inflater.inflate(R.layout.fragment_inventario_listado, container, false);
-        lista=(ListView)view.findViewById(R.id.inventarioList);
+        view=inflater.inflate(R.layout.fragment_bajas_listado, container, false);
+        lista=(ListView)view.findViewById(R.id.bajasList);
         showInventario();
+
         return view;
     }
     public void showInventario()
@@ -73,22 +71,36 @@ public class bajas_listado extends Fragment {
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                //muestra el nuevo fragment
-                //
-                //na.setText("Población de "+ lv1.getItemAtPosition(posicion) + " es "+ habitantes[posicion]);
-                TextView tv1=(TextView)view.findViewById(R.id.textView11);
-                String aret= (String) lista.getItemAtPosition(position);
-//                tv1.setText("posicion: "+lista.getItemIdAtPosition(position)+ " es " );
-                Toast.makeText(getContext(), aret, Toast.LENGTH_SHORT).show();
+
+
+                final String aret= (String) lista.getItemAtPosition(position);
                 Db_inventario dbInventario = new Db_inventario(getActivity());
                 data = dbInventario.getWritableDatabase();
+                //aler
+                AlertDialog.Builder dialogo1 = new AlertDialog.Builder(getContext());
+                dialogo1.setTitle("Importante");
+                dialogo1.setMessage("¿ Desea eliminar el registro seleccionado ?");
+                dialogo1.setCancelable(false);
+                dialogo1.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialogo1, int id) {
+                        //para eliminar
+                        data.execSQL("DELETE FROM inventario WHERE arete='"+aret+"';");
+                    }
+                });
+                dialogo1.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialogo1, int id) {
 
-                //para eliminar
-                data.execSQL("DELETE FROM inventario WHERE arete='"+aret+"';");
+                    }
+                });
+                dialogo1.show();
+
+
                 //para hacer el select (no copiar esta parte)
-                Cursor cursor=data.rawQuery("SELECT * FROM inventario WHERE arete='"+aret+"'",null);
+                //Cursor cursor=data.rawQuery("SELECT * FROM inventario WHERE arete='"+aret+"'",null);
 
             }
         });
     }
+
+
 }
