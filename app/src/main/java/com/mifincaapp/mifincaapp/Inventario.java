@@ -11,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+
 public class Inventario extends AppCompatActivity{
     public static final String TAG = Inventario.class.getName();
     public static final int FORM_KEY=1;
@@ -58,23 +59,26 @@ public class Inventario extends AppCompatActivity{
         item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
-                Fragment fragment=Inventario_eliminar.getInstance();
+                Fragment fragment=Inventario_listado.getInstance();
                 mostrarFragment(fragment);
                 return true;
             }
 
         });
 
-        MenuItem item2 = menu.findItem(R.id.btnBuscarInventario);
-        item2.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
-            @Override
-            public boolean onMenuItemClick(MenuItem item) {
-                Fragment fragment=Inventario_buscar.getInstance();
-                mostrarFragment(fragment);
-                return true;
-            }
-        });
+        //menu buscar
+        
         return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.btnBuscarInventario:
+                onSearchRequested();
+                return true;
+            default:
+                return false;
+        }
     }
 
 }

@@ -75,7 +75,7 @@ public class Inventario_listado extends Fragment {
                  TextView tv1=(TextView)view.findViewById(R.id.textView11);
                 String aret= (String) lista.getItemAtPosition(position);
 
-               Toast.makeText(getContext(), aret, Toast.LENGTH_SHORT).show();
+               Toast.makeText(getContext(),"Arete deleccionado: "+ aret, Toast.LENGTH_SHORT).show();
                 Db_inventario dbInventario = new Db_inventario(getActivity());
                 data = dbInventario.getWritableDatabase();
 
