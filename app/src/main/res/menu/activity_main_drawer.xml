@@ -17,10 +17,12 @@
             android:icon="@android:drawable/ic_menu_edit" />
         <item
             android:id="@+id/Peso"
-            android:title="@string/control_de_peso" />
+            android:title="@string/control_de_peso"
+            android:icon="@android:drawable/stat_notify_sync_noanim" />
         <item
             android:id="@+id/Cambios"
-            android:title="Bajas "></item>
+            android:title="Bajas "
+            android:icon="@android:drawable/ic_menu_close_clear_cancel"></item>
     </group>
 
 </menu>

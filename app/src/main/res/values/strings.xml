@@ -32,8 +32,12 @@
     </string-array>
     <string-array name="raza">
         <item>Seleccione</item>
-        <item>1</item>
-        <item>2</item>
+        <item>Abondance</item>
+        <item>Alentejana</item>
+        <item>American</item>
+        <item>American White Park</item>
+        <item>Arab</item>
+        <item>Otra</item>
 
     </string-array>
     <string name="title_activity_reidentificacion">Reidentificacion</string>
