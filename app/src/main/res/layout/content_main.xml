@@ -15,7 +15,7 @@
 
 
     <TextView
-        android:text="MiFicaApp es una Aplicación Móvil dirigida al sector primario nicaragüense. Esta aplicación, permitirá al usuario llevar una mejor administración de los recursos."
+        android:text="MiFicaApp es una Aplicación Móvil dirigida al sector pecuario nicaragüense. Esta aplicación, permitirá al usuario llevar una mejor administración de los recursos."
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
