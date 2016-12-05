@@ -136,7 +136,7 @@
             android:text="Modificar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/txtArete1"
+            android:layout_above="@+id/txtArete3"
             android:layout_centerHorizontal="true"
             android:id="@+id/textView45"
             android:textAppearance="@style/TextAppearance.AppCompat"

@@ -20,10 +20,10 @@
         </activity>
         <activity
             android:name=".controlPeso"
-            android:label="@string/title_activity_control_peso"
+            android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".controlPeso_registrar"
+            android:name="controlPeso_registrar"
             android:label="@string/title_activity_control_peso_registrar"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".control_peso_buscar" />

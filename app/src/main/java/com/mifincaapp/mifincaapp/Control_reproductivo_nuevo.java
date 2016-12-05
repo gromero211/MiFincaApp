@@ -84,7 +84,7 @@ public class Control_reproductivo_nuevo extends Fragment implements View.OnClick
     private void validarVTerminar() {
         EditText arete, fecha,diagnostico,metodo,semental,fParto,dParto, crias,comentarios;
 
-        arete=(EditText)view.findViewById(R.id.txtArete1);
+        arete=(EditText)view.findViewById(R.id.txtArete3);
         fecha=(EditText)view.findViewById(R.id.txtFechaDiagnostico);
         metodo=(EditText)view.findViewById(R.id.txtMetodo);
         semental=(EditText)view.findViewById(R.id.txtSemental);

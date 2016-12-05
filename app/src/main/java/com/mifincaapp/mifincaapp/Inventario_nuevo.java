@@ -130,8 +130,8 @@ public class Inventario_nuevo extends Fragment implements View.OnClickListener {
         categoria=cat;
         raza=raz;
         fecha=(EditText)view.findViewById(R.id.txtFechaRegistrarPeso);
-        arete=(EditText)view.findViewById(R.id.txtArete1);
-        edad=(EditText)view.findViewById(R.id.txtEdad);
+        arete=(EditText)view.findViewById(R.id.txtArete3);
+        edad=(EditText)view.findViewById(R.id.txtEdadPeso);
 
 
         db.execSQL("INSERT INTO inventario (fecha, arete, edad, categoria, raza)" +

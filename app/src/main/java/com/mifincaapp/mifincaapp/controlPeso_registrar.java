@@ -91,9 +91,9 @@ public class controlPeso_registrar extends Fragment implements View.OnClickListe
         EditText fecha, arete, edad, raza, peso;
 
         fecha=(EditText)view.findViewById(R.id.txtFechaRegistrarPeso);
-        arete=(EditText)view.findViewById(R.id.txtArete1);
-        edad=(EditText)view.findViewById(R.id.txtEdad);
-        raza=(EditText)view.findViewById(R.id.txtRaza);
+        arete=(EditText)view.findViewById(R.id.txtArete3);
+        edad=(EditText)view.findViewById(R.id.txtEdadPeso);
+        raza=(EditText)view.findViewById(R.id.txtRazaPeso);
         peso=(EditText)view.findViewById(R.id.txtPeso);
 
 

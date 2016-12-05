@@ -184,7 +184,7 @@
             android:layout_marginTop="16dp"
             android:id="@+id/textView42"
             android:textAppearance="@style/TextAppearance.AppCompat"
-            android:layout_below="@+id/txtArete1"
+            android:layout_below="@+id/txtArete3"
             android:layout_alignLeft="@+id/textView40"
             android:layout_alignStart="@+id/textView40" />
 
@@ -196,7 +196,7 @@
             android:id="@+id/txtFechaDiagnostico"
             android:textAlignment="center"
             android:textSize="14sp"
-            android:layout_below="@+id/txtArete1"
+            android:layout_below="@+id/txtArete3"
             android:layout_toRightOf="@+id/textView42"
             android:layout_toEndOf="@+id/textView42" />
 
@@ -215,7 +215,7 @@
             android:layout_height="wrap_content"
             android:inputType="number"
             android:ems="10"
-            android:id="@+id/txtArete1"
+            android:id="@+id/txtArete3"
             android:fontFamily="sans-serif"
             android:textSize="14sp"
             android:textAlignment="center"

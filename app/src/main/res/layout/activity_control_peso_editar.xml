@@ -80,8 +80,8 @@
                 android:inputType="date"
                 android:ems="10"
                 android:layout_below="@+id/textView3"
-                android:layout_alignLeft="@+id/textID"
-                android:layout_alignStart="@+id/textID"
+                android:layout_alignLeft="@+id/txtFechaRegistrarPeso"
+                android:layout_alignStart="@+id/txtFechaRegistrarPeso"
                 android:text="17/10/16"
                 android:textAlignment="center"
                 android:id="@+id/txtFechaRegistrarPeso"
@@ -108,7 +108,7 @@
                 android:layout_below="@+id/textView5"
                 android:layout_alignLeft="@+id/txtFechaRegistrarPeso"
                 android:layout_alignStart="@+id/txtFechaRegistrarPeso"
-                android:id="@+id/txtArete1"
+                android:id="@+id/txtArete3"
                 android:text="14" />
 
             <EditText
@@ -118,7 +118,7 @@
                 android:text="5"
                 android:textAlignment="center"
                 android:ems="8"
-                android:id="@+id/textID"
+                android:id="@+id/txtFechaRegistrarPeso"
                 android:layout_alignBaseline="@+id/textView3"
                 android:layout_alignBottom="@+id/textView3"
                 android:layout_alignParentRight="true"
@@ -143,9 +143,9 @@
                 android:textAlignment="center"
                 android:ems="10"
                 android:id="@+id/editText5"
-                android:layout_below="@+id/txtArete1"
-                android:layout_alignLeft="@+id/txtArete1"
-                android:layout_alignStart="@+id/txtArete1" />
+                android:layout_below="@+id/txtArete3"
+                android:layout_alignLeft="@+id/txtArete3"
+                android:layout_alignStart="@+id/txtArete3" />
 
             <TextView
                 android:text="Tendencia racial:"
@@ -168,7 +168,7 @@
                 android:layout_below="@+id/textView12"
                 android:layout_toRightOf="@+id/textView2"
                 android:layout_toEndOf="@+id/textView2"
-                android:id="@+id/txtRaza"
+                android:id="@+id/txtRazaPeso"
                 android:layout_marginTop="10dp"/>
 
             <TextView
@@ -188,8 +188,8 @@
                 android:inputType="number"
                 android:ems="10"
                 android:layout_below="@+id/textView13"
-                android:layout_alignLeft="@+id/txtRaza"
-                android:layout_alignStart="@+id/txtRaza"
+                android:layout_alignLeft="@+id/txtRazaPeso"
+                android:layout_alignStart="@+id/txtRazaPeso"
                 android:id="@+id/editText11"
                 android:text="0"
                 android:textAlignment="center"
