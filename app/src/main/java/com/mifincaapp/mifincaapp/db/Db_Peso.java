@@ -1,6 +1,7 @@
 package com.mifincaapp.mifincaapp.db;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.provider.BaseColumns;
@@ -49,4 +50,12 @@ public class Db_Peso extends SQLiteOpenHelper {
         public static final String PESO_COLUMN = "peso";
 
     }
+    //listar elementos
+    public Cursor getNotes()
+    {
+        String columnas[]={ PersonaContract._ID,PersonaContract.ARETE_COLUMN, PersonaContract.FECHA_COLUMN,PersonaContract.EDAD_COLUMN, PersonaContract.RAZA_COLUMN, PersonaContract.PESO_COLUMN};
+        Cursor c=this.getReadableDatabase().query(PersonaContract.TABLE_NAME,columnas, null,null,null,null, null, null);
+        return c;
+    }
+
 }

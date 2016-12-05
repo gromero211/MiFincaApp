@@ -29,6 +29,9 @@ public class controlPeso extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarControlPeso);
         setSupportActionBar(toolbar);
 
+        //fragment listado
+        Fragment fragment=Peso_listado.getInstance();
+        mostrarFragment(fragment);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fabControlPeso);
         fab.setOnClickListener(new View.OnClickListener() {
