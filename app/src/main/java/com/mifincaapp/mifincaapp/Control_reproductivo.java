@@ -70,9 +70,11 @@ public class Control_reproductivo extends AppCompatActivity {
             case R.id.btnEliminarReg:
                 Fragment fragment1=Control_reproductivo_eliminar.getInstance();
                 mostrarFragment(fragment1);
+                return true;
             case R.id.btnHomeReproductivo:
                 Intent intent=new Intent(this,MainActivity.class);
                 startActivity(intent);
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
