@@ -5,19 +5,22 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/inventario"
-            android:title="@string/inventario"></item>
+            android:title="@string/inventario"
+            android:icon="@android:drawable/ic_input_get"></item>
         <item
             android:id="@+id/reproduccion"
-            android:title="@string/registro_reproductivo" ></item>
+            android:title="@string/registro_reproductivo"
+            android:icon="@android:drawable/ic_menu_day"></item>
         <item
             android:id="@+id/medicamentos"
-            android:title="Control de Medicamentos" />
+            android:title="Control de Medicamentos"
+            android:icon="@android:drawable/ic_menu_edit" />
         <item
             android:id="@+id/Peso"
             android:title="@string/control_de_peso" />
         <item
             android:id="@+id/Cambios"
-            android:title="@string/reidentificaci_n_y_bajas"></item>
+            android:title="Bajas "></item>
     </group>
 
 </menu>
