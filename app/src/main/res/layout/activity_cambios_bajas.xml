@@ -140,7 +140,7 @@
                 android:layout_below="@+id/textView5"
                 android:layout_alignLeft="@+id/txtFechaRegistrarPeso"
                 android:layout_alignStart="@+id/txtFechaRegistrarPeso"
-                android:id="@+id/txtArete"
+                android:id="@+id/txtArete1"
                 android:text="17" />
 
             <EditText

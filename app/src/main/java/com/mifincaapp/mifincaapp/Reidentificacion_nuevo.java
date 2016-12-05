@@ -68,7 +68,7 @@ public class Reidentificacion_nuevo extends Fragment implements View.OnClickList
         EditText fechaRei, areteanterior, aretenuevo, motivocambio;
 
         fechaRei=(EditText)view.findViewById(R.id.txtFechaRegistrarPeso);
-        areteanterior=(EditText)view.findViewById(R.id.txtArete);
+        areteanterior=(EditText)view.findViewById(R.id.txtArete1);
         aretenuevo=(EditText)view.findViewById(R.id.txtAretenuevo);
         motivocambio=(EditText)view.findViewById(R.id.txtMotivocambio);
 
@@ -101,7 +101,7 @@ public class Reidentificacion_nuevo extends Fragment implements View.OnClickList
         String fechaRei,areteanterior,aretenuevo,motivocambio;
 
         fechaRei = ((EditText) view.findViewById(R.id.txtFechaRegistrarPeso)).getText().toString();
-        areteanterior = ((EditText) view.findViewById(R.id.txtArete)).getText().toString();
+        areteanterior = ((EditText) view.findViewById(R.id.txtArete1)).getText().toString();
         aretenuevo = ((EditText) view.findViewById(R.id.txtAretenuevo)).getText().toString();
         motivocambio = ((EditText) view.findViewById(R.id.txtMotivocambio)).getText().toString();
 

@@ -1,5 +1,6 @@
 package com.mifincaapp.mifincaapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
@@ -67,7 +68,7 @@ public class Inventario extends AppCompatActivity{
         });
 
         //menu buscar
-        
+
         return true;
     }
     @Override
@@ -76,6 +77,11 @@ public class Inventario extends AppCompatActivity{
             case R.id.btnBuscarInventario:
                 onSearchRequested();
                 return true;
+            case R.id.btnHomeInventario:
+                Intent intent=new Intent(this,MainActivity.class);
+                startActivity(intent);
+                return true;
+                //break;
             default:
                 return false;
         }

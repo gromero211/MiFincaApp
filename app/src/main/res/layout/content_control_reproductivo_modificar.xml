@@ -16,11 +16,11 @@
         android:text="Fecha de Diagnóstico:"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/txtArete"
-        android:layout_alignLeft="@+id/textView40"
-        android:layout_alignStart="@+id/textView40"
+        android:layout_below="@+id/txtArete1"
+        android:layout_alignLeft="@+id/textView45"
+        android:layout_alignStart="@+id/textView45"
         android:layout_marginTop="23dp"
-        android:id="@+id/textView42"
+        android:id="@+id/textView45"
         android:textAppearance="@style/TextAppearance.AppCompat" />
 
     <EditText
@@ -28,12 +28,12 @@
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:id="@+id/txtArete"
+        android:id="@+id/txtArete1"
         android:text="####"
         android:fontFamily="sans-serif"
         android:textSize="14sp"
         android:textAlignment="center"
-        android:layout_alignBottom="@+id/textView40"
+        android:layout_alignBottom="@+id/textView45"
         android:layout_alignLeft="@+id/txtFechaRegistrarPeso"
         android:layout_alignStart="@+id/txtFechaRegistrarPeso"
         android:layout_alignRight="@+id/txtFechaRegistrarPeso"
@@ -44,11 +44,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="21dp"
-        android:id="@+id/textView44"
+        android:id="@+id/textView45"
         android:textAppearance="@style/TextAppearance.AppCompat"
-        android:layout_below="@+id/textView42"
-        android:layout_alignLeft="@+id/textView42"
-        android:layout_alignStart="@+id/textView42" />
+        android:layout_below="@+id/textView45"
+        android:layout_alignLeft="@+id/textView45"
+        android:layout_alignStart="@+id/textView45" />
 
     <EditText
         android:layout_width="150dp"
@@ -59,10 +59,10 @@
         android:textAlignment="center"
         android:text="dd/mm/aaaa"
         android:textSize="14sp"
-        android:layout_alignBaseline="@+id/textView42"
-        android:layout_alignBottom="@+id/textView42"
-        android:layout_toRightOf="@+id/textView42"
-        android:layout_toEndOf="@+id/textView42" />
+        android:layout_alignBaseline="@+id/textView45"
+        android:layout_alignBottom="@+id/textView45"
+        android:layout_toRightOf="@+id/textView45"
+        android:layout_toEndOf="@+id/textView45" />
 
     <EditText
         android:layout_width="150dp"
@@ -84,9 +84,9 @@
         android:layout_marginTop="24dp"
         android:id="@+id/textView46"
         android:textAppearance="@style/TextAppearance.AppCompat"
-        android:layout_below="@+id/textView41"
-        android:layout_alignLeft="@+id/textView41"
-        android:layout_alignStart="@+id/textView41" />
+        android:layout_below="@+id/textView45"
+        android:layout_alignLeft="@+id/textView45"
+        android:layout_alignStart="@+id/textView45" />
 
     <TextView
         android:text="Desarrollo de parto:"
@@ -139,19 +139,19 @@
         android:text="Semental:"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView41"
+        android:id="@+id/textView45"
         android:textAppearance="@style/TextAppearance.AppCompat"
         android:layout_alignBaseline="@+id/txtSemental"
         android:layout_alignBottom="@+id/txtSemental"
-        android:layout_alignLeft="@+id/textView44"
-        android:layout_alignStart="@+id/textView44" />
+        android:layout_alignLeft="@+id/textView45"
+        android:layout_alignStart="@+id/textView45" />
 
     <EditText
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:inputType="date"
         android:ems="10"
-        android:id="@+id/txtFechaParto"
+        android:id="@+id/tFechaParto"
         android:textAlignment="center"
         android:text="dd/mm/aaaa"
         android:textSize="14sp"
@@ -209,7 +209,7 @@
         android:layout_marginLeft="29dp"
         android:layout_marginStart="29dp"
         android:layout_marginTop="67dp"
-        android:id="@+id/textView40"
+        android:id="@+id/textView45"
         android:textAppearance="@style/TextAppearance.AppCompat"
         android:textSize="14sp"
         android:layout_alignParentTop="true"
@@ -220,9 +220,9 @@
         android:text="Modificar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/txtArete"
+        android:layout_above="@+id/txtArete1"
         android:layout_centerHorizontal="true"
-        android:id="@+id/textView43"
+        android:id="@+id/textView45"
         android:textAppearance="@style/TextAppearance.AppCompat"
         android:textSize="24sp"
         android:textAlignment="center" />

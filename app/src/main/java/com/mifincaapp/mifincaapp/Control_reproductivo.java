@@ -1,17 +1,24 @@
 package com.mifincaapp.mifincaapp;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
 
 public class Control_reproductivo extends AppCompatActivity {
     public static final int FORM_KEY=1;
-   /* public static final int ACTIVITY_CODE = 1;
+    public static final int ACTIVITY_CODE = 1;
 
     public static final String TAG = Control_reproductivo.class.getName();
-    Db_Control dbHelper;
 
-    RecyclerView mRecyclerView;
-    List<Reg_Control> listPersona;
-    ReproduccionAdapter adapter;
     View view;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,15 +26,15 @@ public class Control_reproductivo extends AppCompatActivity {
         setContentView(R.layout.activity_control_reproductivo);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        dbHelper= new Db_Control(this);
+        //control reproductivo listado
+        Fragment fragment=Control_reproductivo_listar.getInstance();
+        mostrarFragment(fragment);
+
 //nuevo
 
-        mRecyclerView = (RecyclerView) findViewById(R.id.list);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
-        mRecyclerView.setLayoutManager(linearLayoutManager);
+
         //initList();
-        adapter = new ReproduccionAdapter(listPersona);
-        mRecyclerView.setAdapter(adapter);
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fabReproductivo);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,17 +52,33 @@ public class Control_reproductivo extends AppCompatActivity {
         trasaccion.replace(R.id.cReproductivo,fragment);
         trasaccion.commit();
     }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu items for use in the action bar
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_reproductivo, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle presses on the action bar items
+        switch (item.getItemId()) {
+            case R.id.btnMmodificar:
+                Fragment fragment=Control_reproductivo_modificar.getInstance();
+                mostrarFragment(fragment);
+                return true;
+            case R.id.btnEliminarReg:
+                Fragment fragment1=Control_reproductivo_eliminar.getInstance();
+                mostrarFragment(fragment1);
+            case R.id.btnHomeReproductivo:
+                Intent intent=new Intent(this,MainActivity.class);
+                startActivity(intent);
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 
-    private void initList() {
-        listPersona = new ArrayList<>();
-        listPersona.addAll(dbHelper.getList(""));
-        Log.d(TAG, "initList: " + listPersona.size());
-    }
-    private void updateRecycler(String newText) {
-        listPersona.clear();
-        listPersona.addAll(dbHelper.getList(newText));
-        adapter.notifyDataSetChanged();
-    }
+
 
 
     public void onClick(View v) {
@@ -63,30 +86,7 @@ public class Control_reproductivo extends AppCompatActivity {
         startActivityForResult(intent, Control_reproductivo.ACTIVITY_CODE);
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == Control_reproductivo.ACTIVITY_CODE &&
-                resultCode == RESULT_OK) {
-            Reg_Control control = new Reg_Control();
-            control.setArete(data.getStringExtra(Control_reproductivo_nuevo.ARETE_KEY));
-            control.setDiagnostico(data.getStringExtra(Control_reproductivo_nuevo.DIAGNOSTICO_KEY));
-            control.setMetodo(data.getStringExtra(Control_reproductivo_nuevo.DETECCION_KEY));
-            control.setSemental(data.getStringExtra(Control_reproductivo_nuevo.SEMENTAL_KEY));
-            control.setParto(data.getStringExtra(Control_reproductivo_nuevo.PARTO_KEY));
-            control.setDesarrollo(data.getStringExtra(Control_reproductivo_nuevo.DESARROLLO_KEY));
-            control.setCrias(data.getStringExtra(Control_reproductivo_nuevo.CRIAS_KEY));
-            control.setComentarios(data.getStringExtra(Control_reproductivo_nuevo.COMENTARIOS_KEY));
-            savePerson(control);
-        }
-    }
 
-    private void savePerson(Reg_Control persona) {
-        if (dbHelper.saveRow(persona)) {
-            updateRecycler("");
-        } else {
-            Toast.makeText(this, R.string.error_on_save, Toast.LENGTH_LONG).show();
-        }
 
-    }
-*/
+
 }

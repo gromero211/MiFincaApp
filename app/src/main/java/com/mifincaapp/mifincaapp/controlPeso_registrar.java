@@ -10,17 +10,10 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Spinner;
-import android.widget.Toast;
 
-import com.mifincaapp.mifincaapp.db.Db_inventario;
-
-import static android.app.Activity.RESULT_OK;
-import static com.mifincaapp.mifincaapp.R.array.raza;
+import com.mifincaapp.mifincaapp.db.Db_Peso;
 
 /**
  * Created by USUARIO on 03/12/2016.
@@ -61,7 +54,7 @@ public class controlPeso_registrar extends Fragment implements View.OnClickListe
 
 
         //abrir la base de datos en modo escritura
-        Db_inventario dbInventario = new Db_inventario(getActivity());
+        Db_Peso dbInventario = new Db_Peso(getActivity());
         db = dbInventario.getWritableDatabase();
 
         //boton guardar
@@ -98,16 +91,16 @@ public class controlPeso_registrar extends Fragment implements View.OnClickListe
         EditText fecha, arete, edad, raza, peso;
 
         fecha=(EditText)view.findViewById(R.id.txtFechaRegistrarPeso);
-        arete=(EditText)view.findViewById(R.id.txtArete);
+        arete=(EditText)view.findViewById(R.id.txtArete1);
         edad=(EditText)view.findViewById(R.id.txtEdad);
         raza=(EditText)view.findViewById(R.id.txtRaza);
         peso=(EditText)view.findViewById(R.id.txtPeso);
 
 
-        db.execSQL("INSERT INTO controlpeso (fecha, arete, edad, raza, peso)" +
-                "VALUES ('"+ fecha.getText() + "', '" + arete.getText() + "', '" + edad.getText() + "', '" + raza.getText() + "', '" + peso.getText() +"')");
-        db.close();
-        Intent intent=new Intent(view.getContext(),Inventario.class);
+        db.execSQL("INSERT INTO controlPeso (fecha, arete, edad, raza, peso)" +
+                " VALUES ('"+ fecha.getText() + "', '" + arete.getText() + "', '" + edad.getText() + "', '" + raza.getText() + "', '" + peso.getText() +"')");
+        //db.close();
+        Intent intent=new Intent(view.getContext(),controlPeso.class);
         startActivity(intent);
         //getActivity().finish();
 

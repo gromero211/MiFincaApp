@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="Eliminar"
+        android:id="@+id/btnEliminarReg" />
+    <item android:title="Modificar"
+        android:id="@+id/btnMmodificar" /><item android:title="Home"
+    android:id="@+id/btnHomeReproductivo"
+    android:icon="?attr/homeAsUpIndicator"
+    app:showAsAction="always"/>
+</menu>

@@ -1,15 +1,18 @@
 package com.mifincaapp.mifincaapp;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
-import static android.app.Activity.RESULT_OK;
+import com.mifincaapp.mifincaapp.db.Db_Control;
 
 
 public class Control_reproductivo_nuevo extends Fragment implements View.OnClickListener{
@@ -22,8 +25,9 @@ public class Control_reproductivo_nuevo extends Fragment implements View.OnClick
     public static final String PARTO_KEY = "parto";
     public static final String CRIAS_KEY = "crias";
     public static final String COMENTARIOS_KEY = "comentarios";
-
+    SQLiteDatabase db;
     View view;
+    Button button;
 
     public Control_reproductivo_nuevo() {
         // Required empty public constructor
@@ -37,47 +41,65 @@ public class Control_reproductivo_nuevo extends Fragment implements View.OnClick
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        view=inflater.inflate(R.layout.fragment_control_reproductivo_nuevo, container, false);
 
-        return inflater.inflate(R.layout.fragment_control_reproductivo_nuevo, container, false);
+        //abrir la base de datos en modo escritura
+        Db_Control dbInventario = new Db_Control(getActivity());
+        db = dbInventario.getWritableDatabase();
+
+        //boton guardar
+        button = (Button) view.findViewById(R.id.btnGuardarReproductivo);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                //alert
+                AlertDialog.Builder dialogo1 = new AlertDialog.Builder(getContext());
+                dialogo1.setTitle("Confirmación");
+                dialogo1.setMessage("¿ Desea guardar los datos ?");
+                dialogo1.setCancelable(false);
+                dialogo1.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialogo1, int id) {
+                        validarVTerminar();
+                    }
+                });
+                dialogo1.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialogo1, int id) {
+                        Intent intent=new Intent(view.getContext(),controlPeso.class);
+                        startActivity(intent);
+                    }
+                });
+                dialogo1.show();
+            }
+        });
+        return view;
     }
-    private void finishWithResult() {
 
-        String diagnostico,arete,deteccion,semental,parto,desarrollo,crias,comentarios;
-
-        arete = ((EditText) view.findViewById(R.id.txtArete)).getText().toString();
-        diagnostico = ((EditText) view.findViewById(R.id.txtFechaRegistrarPeso)).getText().toString();
-        deteccion = ((EditText) view.findViewById(R.id.txtMetodo)).getText().toString();
-        semental = ((EditText) view.findViewById(R.id.txtSemental)).getText().toString();
-        parto = ((EditText) view.findViewById(R.id.txtFechaParto)).getText().toString();
-        desarrollo = ((EditText) view.findViewById(R.id.txtParto)).getText().toString();
-        crias = ((EditText) view.findViewById(R.id.txtCrias)).getText().toString();
-        comentarios = ((EditText) view.findViewById(R.id.txtComentarios)).getText().toString();
-
-        //categoria = ((EditText) view.findViewById(R.id.spnCategoria)).getText().toString();
-        // String stringAge = ((EditText) findViewById(R.id.edad)).getText().toString();
-        if (arete.length() > 0 && diagnostico.length() > 0) {
-
-            Bundle data = new Bundle();
-            data.putString(ARETE_KEY, arete);
-            data.putString(DIAGNOSTICO_KEY, diagnostico);
-            data.putString(DETECCION_KEY, deteccion);
-            data.putString(SEMENTAL_KEY, semental);
-            data.putString(PARTO_KEY, parto);
-            data.putString(DESARROLLO_KEY, desarrollo);
-            data.putString(CRIAS_KEY, crias);
-            data.putString(COMENTARIOS_KEY, comentarios);
-            Intent intent = new Intent();
-            intent.putExtras(data);
-            getActivity().setResult(RESULT_OK, intent);
-            getActivity().finish();
-        } else {
-            Toast.makeText(getActivity(), R.string.require_fields, Toast.LENGTH_LONG).show();
-        }
-    }
 
 
     @Override
     public void onClick(View v) {
+
+    }
+    private void validarVTerminar() {
+        EditText arete, fecha,diagnostico,metodo,semental,fParto,dParto, crias,comentarios;
+
+        arete=(EditText)view.findViewById(R.id.txtArete1);
+        fecha=(EditText)view.findViewById(R.id.txtFechaDiagnostico);
+        metodo=(EditText)view.findViewById(R.id.txtMetodo);
+        semental=(EditText)view.findViewById(R.id.txtSemental);
+        fParto=(EditText)view.findViewById(R.id.txtFechaParto);
+        dParto=(EditText)view.findViewById(R.id.txtParto);
+        crias=(EditText)view.findViewById(R.id.txtCrias);
+        comentarios=(EditText)view.findViewById(R.id.txtComentarios);
+
+
+        db.execSQL("INSERT INTO Reg_Reproductivo (arete,fecha_diagnostico,met_deteccion,semental,fec_parto,des_parto,no_crias,comentarios)" +
+                " VALUES ('"+ arete.getText() + "', '" + fecha.getText() + "', '" + metodo.getText() + "', '" + semental.getText() + "', '" + fParto.getText() + "', '" + dParto.getText()+ "', '" + crias.getText()+ "', '" + comentarios.getText() + "')");
+        //db.close();
+        Intent intent=new Intent(view.getContext(),Control_reproductivo.class);
+        startActivity(intent);
+        //getActivity().finish();
 
     }
 }

@@ -38,6 +38,7 @@ public class Db_Control extends SQLiteOpenHelper {
 
 
 
+
     public Db_Control(Context context){
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
@@ -45,6 +46,7 @@ public class Db_Control extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(SQL_CREATE_TABLE);
+
     }
 
     @Override
@@ -116,5 +118,11 @@ public class Db_Control extends SQLiteOpenHelper {
         public static final String DES_PARTO_COLUMN = "des_parto";
         public static final String CRIAS_COLUMN = "no_crias";
         public static final String COMENTARIOS_COLUMN = "comentarios";
+    }
+    public Cursor getNotes()
+    {
+        String columnas[]={ PersonaContract._ID, PersonaContract.ARETE_COLUMN};
+        Cursor c=this.getReadableDatabase().query(PersonaContract.TABLE_NAME,columnas, null,null,null,null, null);
+        return c;
     }
 }

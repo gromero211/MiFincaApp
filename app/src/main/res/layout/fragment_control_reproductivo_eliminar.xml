@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="Inventario_listado">
+    tools:context="com.mifincaapp.mifincaapp.Control_reproductivo_eliminar">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -11,12 +11,13 @@
         android:layout_height="match_parent">
 
         <ListView
-            android:layout_marginTop="50dp"
-            android:id="@+id/inventarioList"
+            android:layout_marginTop="75dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:id="@+id/reproductivoListaEliminar" />
+
         <TextView
-            android:text="Listado"
+            android:text="Eliminar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView52"
