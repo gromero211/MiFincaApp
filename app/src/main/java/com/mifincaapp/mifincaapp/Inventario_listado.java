@@ -74,7 +74,7 @@ public class Inventario_listado extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                 TextView tv1=(TextView)view.findViewById(R.id.textView11);
+
                 String aret= (String) lista.getItemAtPosition(position);
 
                Toast.makeText(getContext(),"Arete deleccionado: "+ aret, Toast.LENGTH_SHORT).show();
