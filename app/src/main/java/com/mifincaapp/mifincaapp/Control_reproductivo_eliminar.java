@@ -2,6 +2,7 @@ package com.mifincaapp.mifincaapp;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -12,7 +13,6 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import com.mifincaapp.mifincaapp.db.Db_Control;
 
@@ -90,6 +90,8 @@ public class Control_reproductivo_eliminar extends Fragment {
                     public void onClick(DialogInterface dialogo1, int id) {
                         //para eliminar
                         data.execSQL("DELETE FROM Reg_Reproductivo WHERE arete='"+aret+"';");
+                        Intent intent=new Intent(getContext(),Control_reproductivo.class);
+                        startActivity(intent);
                     }
                 });
                 dialogo1.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
