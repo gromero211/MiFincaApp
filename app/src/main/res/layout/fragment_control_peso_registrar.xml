@@ -32,15 +32,6 @@
                 android:layout_marginLeft="120dp"/>
 
             <TextView
-                android:text="Número:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView3"
-                android:textSize="18dp"
-                android:layout_marginTop="60dp"
-                android:layout_marginLeft="20dp"/>
-
-            <TextView
                 android:text="Fecha"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -145,17 +136,6 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="date"
-                android:ems="10"
-                android:textAlignment="center"
-                android:id="@+id/txtFechaRegistrarPeso"
-                android:layout_below="@+id/textID"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true" />
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:inputType="textPersonName"
                 android:textAlignment="center"
                 android:ems="10"
@@ -174,14 +154,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/btnGuardarPeso"
         android:layout_marginTop="400dp"
-        android:layout_marginLeft="70dp"/>
-
-    <Button
-        android:text="Cancelar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnCancelarRegistroPeso"
-        android:layout_marginTop="400dp"
-        android:layout_marginLeft="210dp"/>
+        android:layout_marginLeft="140dp"/>
 
 </android.support.design.widget.CoordinatorLayout>
