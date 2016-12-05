@@ -60,9 +60,9 @@ public class controlPeso extends AppCompatActivity {
         // Handle presses on the action bar items
         switch (item.getItemId()) {
             case R.id.btnPEliminar:
-                //Fragment fragment=Control_reproductivo_modificar.getInstance();
-                //mostrarFragment(fragment);
-                //aqui vas a pegar el codigo para mostrar el fragment control_peso_eliminar (si no has creado el fragment tenes que crearlo)
+                Fragment fragment=Peso_eliminar.getInstance();
+                mostrarFragment(fragment);
+                //mostrar el fragment control_peso_eliminar
                 return true;
 
             default:
